@@ -1,0 +1,61 @@
+{
+  "window.titleBarStyle": "custom",
+  "workbench.colorTheme": "One Dark Pro Flat",
+  "editor.fontFamily": "'FiraCode Nerd Font', 'FiraCode Nerd Font Mono', 'monospace', monospace",
+  "editor.inlineSuggest.enabled": true,
+
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.enableCommitSigning": true,
+
+  "[html]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[css]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[markdown]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[json]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[jsonc]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[scss]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[typescriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+
+  "bashIde.shellcheckPath": "/usr/bin/shellcheck",
+  "shfmt.executablePath": "/usr/bin/shfmt",
+
+  "errorLens.gutterIconsEnabled": true,
+  "errorLens.messageMaxChars": 0,
+
+  "todo-tree.highlights.customHighlight": {
+    "TODO": {
+      "type": "text",
+      "foreground": "#000000", // black
+      "background": "#00FF00", // green
+      "iconColour": "#00FF00", // green
+      "icon": "shield-check",
+      "gutterIcon": true
+    },
+    "FIXME": {
+      "type": "text",
+      "foreground": "#000000", // black
+      "background": "#FFFF00", // yellow
+      "iconColour": "#FFFF00", // yellow
+      "icon": "shield",
+      "gutterIcon": true
+    },
+    "HACK": {
+      "type": "text",
+      "foreground": "#000000", // black
+      "background": "#FF0000", // red
+      "iconColour": "#FF0000", // red
+      "icon": "shield-x",
+      "gutterIcon": true
+    },
+    "BUG": {
+      "type": "text",
+      "foreground": "#000000", // black
+      "background": "#FFA500", // orange
+      "iconColour": "#FFA500", // orange
+      "icon": "bug",
+      "gutterIcon": true
+    }
+  }
+}
