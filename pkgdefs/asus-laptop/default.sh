@@ -11,7 +11,7 @@ if ! grep -q "\[g14\]" /etc/pacman.conf; then
 fi
 
 sudo pacman -S --needed --noconfirm asusctl power-profiles-daemon supergfxctl switcheroo-control
-sudo systemctl enable --now power-profiles-daemon.service rog-control-center
+sudo systemctl enable --now power-profiles-daemon.service
 sudo systemctl enable --now supergfxd
 sudo systemctl enable --now switcheroo-control
 
@@ -19,3 +19,5 @@ sudo systemctl enable --now switcheroo-control
 # ln -s /usr/share/applications/rog-control-center.desktop $HOME/.config/autostart/rog-control-center.desktop
 
 sudo pacman -S --needed --noconfirm lact ryzenadj
+
+sudo systemctl enable --now lactd
