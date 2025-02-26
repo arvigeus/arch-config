@@ -8,3 +8,6 @@ sudo pacman -S --needed --noconfirm svgpart markdownpart kio-extras kio-fuse kio
 # KDE Connect
 sudo ufw allow 1714:1764/tcp
 sudo ufw allow 1714:1764/udp
+
+# Theme
+sudo pacman -S --needed --noconfirm darkly-qt6-git
