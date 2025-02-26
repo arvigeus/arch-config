@@ -10,7 +10,13 @@ code --install-extension pflannery.vscode-versionlens
 code --install-extension yoavbls.pretty-ts-errors
 code --install-extension wix.vscode-import-cost
 code --install-extension gruntfuggly.todo-tree
+## Color schemes
+### "workbench.colorTheme": "One Dark Pro Flat"
 code --install-extension zhuangtongfa.material-theme
+### "workbench.colorTheme": "Adwaita Dark & Github syntax highlighting",
+code --install-extension egirlcatnip.adwaita-github-theme
+### Fixes the theme colors
+sed -i 's/#242424/#262626/g' "$HOME/.vscode-oss/extensions/egirlcatnip.adwaita-github-theme*/themes/adwaita-dark-github.json"
 ## Web Dev
 code --install-extension dbaeumer.vscode-eslint
 code --install-extension esbenp.prettier-vscode

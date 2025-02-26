@@ -1,6 +1,6 @@
 {
   "window.titleBarStyle": "custom",
-  "workbench.colorTheme": "One Dark Pro Flat",
+  "workbench.colorTheme": "Adwaita Dark & Github syntax highlighting",
   "editor.fontFamily": "'FiraCode Nerd Font', 'FiraCode Nerd Font Mono', 'monospace', monospace",
   "editor.inlineSuggest.enabled": true,
 
