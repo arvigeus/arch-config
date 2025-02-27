@@ -78,6 +78,20 @@ arr_stop() {
     notify-send --app-name "arr_stop" "TODO" "Not implemented"
 }
 
+podman_reset() {
+    podman container rm -a -f
+    podman image rm -a -f
+    podman volume rm -a -f
+    podman network rm "$(podman network ls -q)"
+    podman pod rm -a -f
+    podman system prune -a -f
+}
+
+bash_reload() {
+    # shellcheck disable=SC1090
+    source ~/.bashrc
+}
+
 # Define the options and their corresponding functions
 OPTIONS=(
     "Profile: Powersave|profile_powersave"
@@ -94,6 +108,8 @@ OPTIONS=(
     "Bluetooth: Stop|bluetooth_stop"
     "Arr: Start|arr_start"
     "Arr: Stop|arr_stop"
+    "Podman: Reset|podman_reset"
+    "Bash: Reload|bash_reload"
 )
 
 # Use wofi to display options and get the selected choice
