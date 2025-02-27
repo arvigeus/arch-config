@@ -6,9 +6,10 @@ default:
 	@$(SCRIPT)
 
 pkg:
-	@./pkgdefs/$(name)/default.sh
+	@source ./utils/default.sh && ./pkgdefs/$(name)/default.sh
 
 sh:
-	@find ./pkgdefs/ -type f -name "*.sh" -exec chmod +x {} \;
+	@find ./pkgdefs/ ./utils/ -type f -name "*.sh" -exec chmod +x {} \;
+	@find ./pkgdefs/ -type f -exec touch {} \;
 
 .PHONY: default pkg sh

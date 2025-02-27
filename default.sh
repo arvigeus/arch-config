@@ -1,10 +1,14 @@
 #!/bin/bash
 
+source ./utils/default.sh
+
 source ./pkgdefs/sudoers/default.sh
 source ./pkgdefs/git/default.sh
+source ./pkgdefs/utils/default.sh
 
 source ./pkgdefs/pacman/default.sh
 source ./pkgdefs/flatpak/default.sh
+source ./pkgdefs/appimage/default.sh
 
 source ./pkgdefs/ufw/default.sh
 source ./pkgdefs/cloudflare/default.sh
@@ -57,5 +61,6 @@ source ./pkgdefs/nodejs/default.sh
 source ./pkgdefs/deno/default.sh
 
 source ./pkgdefs/bash/default.sh
+source ./pkgdefs/wofi/default.sh
 
 source ./todo.sh

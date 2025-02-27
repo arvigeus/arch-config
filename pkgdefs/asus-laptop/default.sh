@@ -10,7 +10,7 @@ if ! grep -q "\[g14\]" /etc/pacman.conf; then
     sudo pacman -Suy
 fi
 
-sudo pacman -S --needed --noconfirm asusctl power-profiles-daemon supergfxctl switcheroo-control
+sudo pacman -S --needed --noconfirm asusctl rog-control-center power-profiles-daemon supergfxctl switcheroo-control
 sudo systemctl enable --now power-profiles-daemon.service
 sudo systemctl enable --now supergfxd
 sudo systemctl enable --now switcheroo-control
@@ -21,3 +21,6 @@ sudo systemctl enable --now switcheroo-control
 sudo pacman -S --needed --noconfirm lact ryzenadj
 
 sudo systemctl enable --now lactd
+
+mkdir -p "$HOME/.local/bin/"
+cp -p ./pkgdefs/asus-laptop/performance_profile.sh "$HOME/.local/bin/performance_profile"
