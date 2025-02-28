@@ -15,8 +15,8 @@ sudo systemctl enable --now power-profiles-daemon.service
 sudo systemctl enable --now supergfxd
 sudo systemctl enable --now switcheroo-control
 
-# mkdir -p $HOME/.config/autostart
-# ln -s /usr/share/applications/rog-control-center.desktop $HOME/.config/autostart/rog-control-center.desktop
+mkdir -p "$HOME/.config/autostart"
+ln -s /usr/share/applications/rog-control-center.desktop "$HOME/.config/autostart/rog-control-center.desktop"
 
 sudo pacman -S --needed --noconfirm lact ryzenadj
 
