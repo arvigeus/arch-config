@@ -62,5 +62,6 @@ source ./pkgdefs/deno/default.sh
 source ./pkgdefs/bash/default.sh
 source ./pkgdefs/rofi/default.sh
 source ./pkgdefs/eza/default.sh
+source ./pkgdefs/bat/default.sh
 
 source ./todo.sh
