@@ -61,6 +61,6 @@ source ./pkgdefs/nodejs/default.sh
 source ./pkgdefs/deno/default.sh
 
 source ./pkgdefs/bash/default.sh
-source ./pkgdefs/wofi/default.sh
+source ./pkgdefs/rofi/default.sh
 
 source ./todo.sh

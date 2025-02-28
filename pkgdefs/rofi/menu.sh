@@ -112,8 +112,8 @@ OPTIONS=(
     "Bash: Reload|bash_reload"
 )
 
-# Use wofi to display options and get the selected choice
-CHOICE=$(printf "%s\n" "${OPTIONS[@]}" | awk -F'|' '{print $1}' | wofi --dmenu -i --prompt "Select action:")
+# Use rofi to display options and get the selected choice
+CHOICE=$(printf "%s\n" "${OPTIONS[@]}" | awk -F'|' '{print $1}' | rofi -dmenu -i -p "Select action:")
 
 # If a choice was made, execute the corresponding function
 if [ -n "$CHOICE" ]; then
