@@ -42,6 +42,7 @@ source ./pkgdefs/electron/default.sh
 
 source ./pkgdefs/zed/default.sh
 source ./pkgdefs/vscode/default.sh
+source ./pkgdefs/micro/default.sh
 
 source ./pkgdefs/zen/default.sh
 source ./pkgdefs/chromium/default.sh
