@@ -6,7 +6,7 @@ default:
 	@$(SCRIPT)
 
 pkg:
-	@source ./utils/default.sh && ./pkgdefs/$(name)/default.sh
+	@source ./pkgdefs/$(name)/default.sh
 
 sh:
 	@find ./pkgdefs/ ./utils/ -type f -name "*.sh" -exec chmod +x {} \;

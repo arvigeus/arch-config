@@ -1,7 +1,5 @@
 #!/bin/bash
 
-source ./utils/default.sh
-
 source ./pkgdefs/sudoers/default.sh
 source ./pkgdefs/git/default.sh
 source ./pkgdefs/utils/default.sh
@@ -62,5 +60,6 @@ source ./pkgdefs/deno/default.sh
 
 source ./pkgdefs/bash/default.sh
 source ./pkgdefs/rofi/default.sh
+source ./pkgdefs/eza/default.sh
 
 source ./todo.sh
