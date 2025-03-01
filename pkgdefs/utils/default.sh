@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo pacman -S --needed --noconfirm jq
+sudo pacman -S --needed --noconfirm jq bc

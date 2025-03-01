@@ -16,11 +16,19 @@ sudo systemctl enable --now supergfxd
 sudo systemctl enable --now switcheroo-control
 
 mkdir -p "$HOME/.config/autostart"
-ln -s /usr/share/applications/rog-control-center.desktop "$HOME/.config/autostart/rog-control-center.desktop"
+if [ ! -L "$SYMLINK" ]; then
+    ln -s /usr/share/applications/rog-control-center.desktop "$HOME/.config/autostart/rog-control-center.desktop"
+fi
 
-sudo pacman -S --needed --noconfirm lact ryzenadj
-
+sudo pacman -S --needed --noconfirm lact
 sudo systemctl enable --now lactd
+
+sudo pacman -S --needed --noconfirm linux-headers
+sudo pacman -S --needed --noconfirm ryzenadj ryzen_smu-dkms-git
+# https://gitlab.com/leogx9r/ryzen_smu
+echo "ryzen_smu" | sudo tee /etc/modules-load.d/ryzen_smu.conf
+# Needs restart
+# Test: sudo ryzenadj --info
 
 mkdir -p "$HOME/.local/bin/"
 cp -p ./pkgdefs/asus-laptop/performance_profile.sh "$HOME/.local/bin/performance_profile"

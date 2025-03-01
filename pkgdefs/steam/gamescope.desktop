@@ -1,0 +1,7 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Gamescope
+Comment=Gamescope
+Exec=/usr/bin/gamescope-session
+Type=Application
+DesktopNames=gamescope

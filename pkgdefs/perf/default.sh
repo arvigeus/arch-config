@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo pacman -S --needed --noconfirm btop powertop 
+sudo pacman -S --needed --noconfirm btop powertop stress-ng
