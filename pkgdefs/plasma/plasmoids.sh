@@ -7,26 +7,31 @@ systemctl --user enable --now arch-update.timer
 
 TMP=$(mktemp -d)
 git clone --depth=1 https://github.com/HimDek/Overview-Widget-for-Plasma.git "$TMP"
-make -C "$TMP" overview
-kpackagetool6 -t Plasma/Applet -i "$TMP/overview.plasmoid"
+kpackagetool6 -t Plasma/Applet -i "$TMP"
 rm -rf "$TMP"
 
-# plasma-panel-colorizer
-# https://github.com/luisbocanegra/plasma-panel-colorizer
+# paru -S --noconfirm --needed kwin-scripts-sticky-window-snapping-git
+TMP=$(mktemp -d)
+git clone --depth=1 https://github.com/Flupp/sticky-window-snapping.git "$TMP"
+kpackagetool6 -t KWin/Script -i "$TMP/package"
+rm -rf "$TMP"
+kwriteconfig6 --file kwinrc --group Plugins --key sticky-window-snappingEnabled true
 
-# Koi
-# https://github.com/baduhai/Koi
 
-# Kröhnkite
-# https://github.com/anametologin/krohnkite
+paru -S --noconfirm --needed plasma6-applets-wallhaven-reborn-git
+source ./pkgdefs/plasma/wallheaven.sh
 
-# Sticky Window Snapping
-# https://github.com/Flupp/sticky-window-snapping
+paru -S --noconfirm --needed plasma6-applets-panel-colorizer
 
-# Plasma Drawer
-# https://github.com/p-connor/plasma-drawer
+paru -S --noconfirm --needed koi
 
-# Wallhaven Wallpaper Reborn
-# https://github.com/Blacksuan19/plasma-wallpaper-wallhaven-reborn
-# kpackagetool6 -t Plasma/Wallpaper -i ./package
-# TODO: query: Makoto Shinkai,Kimi no Na Wa,The Garden of Words,5 Centimeters Per Second,Studio Ghibli,Nier Automata,Nier,Life is Strange,Wall-E,Bioshock Infinite,Stellar Blade,Firewatch,Transistor,Erased
+sudo pacman -S --noconfirm --needed kwin-scripts-krohnkite-git
+# kwriteconfig6 --file kwinrc --group Plugins --key krohnkiteEnabled true
+
+TMP=$(mktemp -d)
+git clone --depth=1 https://github.com/p-connor/plasma-drawer.git "$TMP"
+desktoptojson -i "$TMP/metadata.desktop" -o "$TMP/metadata.json"
+kpackagetool6 -t Plasma/Applet -i "$TMP"
+rm -rf "$TMP"
+
+qdbus org.kde.KWin /KWin reconfigure
