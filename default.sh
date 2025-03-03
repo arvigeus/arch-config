@@ -47,6 +47,7 @@ source ./pkgdefs/micro/default.sh
 
 source ./pkgdefs/zen/default.sh
 source ./pkgdefs/chromium/default.sh
+source ./pkgdefs/tor/default.sh
 
 source ./pkgdefs/qBittorrent/default.sh
 source ./pkgdefs/productivity/default.sh

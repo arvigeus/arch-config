@@ -6,6 +6,16 @@ if [ "$EUID" -eq 0 ]; then
     exit 1
 fi
 
+# Power Management
+kwriteconfig6 --file powerdevilrc --group "AC" --group "Performance" --key "PowerProfile" "balanced"
+kwriteconfig6 --file powerdevilrc --group "AC" --group "RunScript" --key "ProfileLoadCommand" "/home/arvigeus/.local/bin/performance_profile balanced\n"
+kwriteconfig6 --file powerdevilrc --group "AC" --group "RunScript" --key "ProfileUnloadCommand" "/home/arvigeus/.local/bin/performance_profile powersave"
+kwriteconfig6 --file powerdevilrc --group "AC" --group "SuspendAndShutdown" --key "AutoSuspendAction" "0"
+kwriteconfig6 --file powerdevilrc --group "AC" --group "SuspendAndShutdown" --key "LidAction" "64"
+
+kwriteconfig6 --file powerdevilrc --group "Battery" --group "Performance" --key "PowerProfile" "power-saver"
+kwriteconfig6 --file powerdevilrc --group "Battery" --group "SuspendAndShutdown" --key "AutoSuspendIdleTimeoutSec" "1800"
+
 # Workspace
 kwriteconfig6 --file kdeglobals --group KDE --key SingleClick true
 
@@ -15,14 +25,19 @@ kwriteconfig6 --file "dolphinrc" --group "General" --type=bool --key "BrowseThro
 # Configure ksmserverrc
 kwriteconfig6 --file "ksmserverrc" --group "General" --key "loginMode" "emptySession"
 
-# # Configure kdeglobals
+# Configure kdeglobals
 # kwriteconfig6 --file "kdeglobals" --group "General" --type=bool --key "accentColorFromWallpaper" "true"
 
-# # Configure screen locker
+# Configure screen locker
+kwriteconfig6 --file "kscreenlockerrc" --group "Daemon" --type=bool --key "Autolock" "false"
+kwriteconfig6 --file "kscreenlockerrc" --group "Daemon" --type=int --key "Timeout" "0"
 kwriteconfig6 --file "kscreenlockerrc" --group "Greeter" --key "WallpaperPlugin" "com.plasma.wallpaper.wallhaven"
 kwriteconfig6 --file "kscreenlockerrc" --group "Greeter" --group "Wallpaper" --group "com.plasma.wallpaper.wallhaven" --group "General" --key "WallpaperDelay" "1800"
 # kwriteconfig6 --file "kscreenlockerrc" --group "Greeter" "WallpaperPlugin" "org.kde.potd"
 # kwriteconfig6 --file "kscreenlockerrc" --group "Greeter" --group "Wallpaper" --group "org.kde.potd" --group "General" "Provider" "bing"
+
+# Disable Overview effect on screen border
+kwriteconfig6 --file "kwinrc" --group "Effect-overview" --type=int --key "BorderActivate" "9"
 
 # # Configure splash screen
 kwriteconfig6 --file "ksplashrc" --group "KSplash" --key "Engine" "none"
