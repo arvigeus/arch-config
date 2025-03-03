@@ -6,6 +6,8 @@ if [ "$EUID" -eq 0 ]; then
     exit 1
 fi
 
+kwriteconfig6 --file kdeglobals --group KDE --key SingleClick true
+
 # Configure workspace settings
 kwriteconfig6 --file "dolphinrc" --group "General" --type=bool --key "BrowseThroughArchives" "true"
 
