@@ -6,6 +6,7 @@ if [ "$EUID" -eq 0 ]; then
     exit 1
 fi
 
+# Workspace
 kwriteconfig6 --file kdeglobals --group KDE --key SingleClick true
 
 # Configure workspace settings
@@ -75,6 +76,19 @@ kwriteconfig6 --file "kxkbrc" --group "Layout" --key "VariantList" ",phonetic"
 
 # Configure locale
 kwriteconfig5 --file "plasma-localerc" --group "Formats" --key "LANG" "en_US.UTF-8"
+
+# Shortcuts
+if [ ! -e "$HOME/.local/share/applications/rofi_menu.desktop" ]; then
+    mkdir -p "$HOME/.local/share/applications"
+    cat > "$HOME/.local/share/applications/rofi_menu.desktop" <<EOF
+[Desktop Entry]
+Exec=/home/arvigeus/.local/bin/rofi_menu
+Name=rofi_menu
+NoDisplay=true
+Type=Application
+EOF
+fi
+kwriteconfig6 --file kglobalshortcutsrc --group "services" --group "rofi_menu.desktop" --key "_launch" "Meta+Space"
 
 # Restart plasmashell to apply changes
 (sleep 1 && kquitapp6 plasmashell && sleep 2 && plasmashell --replace &) >/dev/null 2>&1 &
