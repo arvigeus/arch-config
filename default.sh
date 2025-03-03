@@ -15,6 +15,7 @@ source ./pkgdefs/amdgpu/default.sh
 source ./pkgdefs/asus-laptop/default.sh
 source ./pkgdefs/mkinitcpio/default.sh
 source ./pkgdefs/ssd/default.sh
+source ./pkgdefs/logitech/default.sh
 
 source ./pkgdefs/plymouth/default.sh
 
