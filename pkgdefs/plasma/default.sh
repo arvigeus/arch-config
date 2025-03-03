@@ -12,4 +12,6 @@ sudo ufw allow 1714:1764/udp
 # Theme
 sudo pacman -S --needed --noconfirm darkly-qt6-git
 
-source ./pkgdefs/plasma/plasmoids.sh
+source ./pkgdefs/plasma/extensions/default.sh
+
+source ./pkgdefs/plasma/config.sh
