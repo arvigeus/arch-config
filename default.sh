@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ./pkgdefs/sudoers/default.sh
+source ./pkgdefs/passwordless/default.sh
 source ./pkgdefs/git/default.sh
 source ./pkgdefs/utils/default.sh
 
