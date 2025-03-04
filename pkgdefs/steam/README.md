@@ -1,7 +1,20 @@
 # Steam
 
+## Launch options
+
+Use this if you want Mangohud and Gamemode:
+
+```
+env MANGOHUD_CONFIG=”fsr,fps_value.gamemode” gamemoderun gamescope –mangoapp -w 640 -h 380 -W 1920 -H 1080 -F fsr -f – %command%
+```
+
+Enable FSR via desktop steam:
+
+```
+WINE_FULLSCREEN_FSR=1 WINE_FULLSCREEN_FSR_MODE=ultra %command%
+```
+
 ## Related
 
-- [Installing Arch on my Legion Go - A High Level Guide and my learnings](https://gaming.lenovo.com/legion-go/post/installing-arch-on-my-legion-go---a-high-level-guide-and-my-learnings-tUz9yvPwS1spaZw)
-- [ChimeraOS Gamescope Session](https://github.com/ChimeraOS/gamescope-session/blob/main/usr/share/gamescope-session-plus/gamescope-session-plus)
-- [Nobara Gamescope Session](https://github.com/Nobara-Project/steamdeck-edition-packages/blob/main/gamescope-session-plus/usr/share/gamescope-session-plus/gamescope-session-plus)
+- [github:ValveSoftware/steam-for-linux](https://github.com/ValveSoftware/steam-for-linux)
+- [Steam command Line options](https://gist.github.com/davispuh/6600880)

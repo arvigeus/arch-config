@@ -30,6 +30,7 @@ source ./pkgdefs/emulation/default.sh
 source ./pkgdefs/brew/default.sh
 
 source ./pkgdefs/media/default.sh
+source ./pkgdefs/yt-dlp/default.sh
 source ./pkgdefs/mpv/default.sh
 source ./pkgdefs/vlc/default.sh
 source ./pkgdefs/GIMP/default.sh
@@ -60,6 +61,7 @@ source ./pkgdefs/fonts/default.sh
 source ./pkgdefs/programming/default.sh
 source ./pkgdefs/nodejs/default.sh
 source ./pkgdefs/deno/default.sh
+source ./pkgdefs/sqlite/default.sh
 
 source ./pkgdefs/bash/default.sh
 source ./pkgdefs/rofi/default.sh

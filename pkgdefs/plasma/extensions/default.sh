@@ -35,4 +35,11 @@ if ! echo "$INSTALLED_APPLETS" | grep -q "p-connor.plasma-drawer"; then
     rm -rf "$TMP"
 fi
 
+if ! echo "$INSTALLED_APPLETS" | grep -q "com.github.antroids.application-title-bar"; then
+    TMP=$(mktemp -d)
+    git clone --depth=1 hhttps://github.com/antroids/application-title-bar.git "$TMP"
+    kpackagetool6 -t Plasma/Applet -i "$TMP/package"
+    rm -rf "$TMP"
+fi
+
 qdbus org.kde.KWin /KWin reconfigure
