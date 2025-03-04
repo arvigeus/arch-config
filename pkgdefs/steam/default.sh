@@ -4,19 +4,9 @@ source ./utils/file.sh
 
 # https://wiki.archlinux.org/title/Steam
 # https://wiki.archlinux.org/title/Gaming
-# https://wiki.archlinux.org/title/Gamescope
 sudo pacman -S --needed --noconfirm \
-    steam steam-native-runtime \
-    gamescope \
-    mangohud lib32-mangohud \
-    goverlay \
-    seatd
+    steam steam-native-runtime
 
-sudo systemctl enable seatd
-sudo usermod -aG seat "$USER"
-sudo usermod -aG video "$USER"
-
-flatpak install -y flathub com.valvesoftware.Steam
 flatpak install -y flathub org.freedesktop.Platform.VulkanLayer.gamescope/x86_64/24.08
 
 # Steam Native libs. Taken from:
@@ -68,18 +58,6 @@ EOF
 create_steam_minimal_shortcut "Runtime"
 create_steam_minimal_shortcut "Native"
 
-file_add_line "SteamDeck=1" "$HOME/.env"
-
 # https://wiki.archlinux.org/title/Improving_performance
 echo "vm.max_map_count = 2147483642" | sudo tee /etc/sysctl.d/80-gamecompatibility.conf
 sudo sysctl --system
-
-
-# Steam Gamescope Session
-sudo cp -u -p ./pkgdefs/steam/gamescope-session.sh /usr/bin/gamescope-session
-sudo chmod +x /usr/bin/gamescope-session
-sudo cp -u -p ./pkgdefs/steam/steamos-session-select.sh /usr/bin/steamos-session-select
-sudo chmod +x /usr/bin/steamos-session-select
-sudo cp -u -p ./pkgdefs/steam/gamescope.desktop /usr/share/wayland-sessions/gamescope.desktop
-sudo cp -u -p ./pkgdefs/steam/steam-big-picture.desktop /usr/share/wayland-sessions/steam-big-picture.desktop
-sudo setcap 'CAP_SYS_NICE=eip' "$(which gamescope)"
