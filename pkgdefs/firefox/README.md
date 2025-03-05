@@ -1,4 +1,4 @@
-# Zen
+# Firefox
 
 ## Tips and Tricks
 

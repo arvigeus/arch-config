@@ -3,7 +3,9 @@
 source ./utils/file.sh
 
 sudo pacman -S --needed --noconfirm chromium
-source ./pkgdefs/chromium/extensions.sh
+
+source ./pkgdefs/browser-extensions/default.sh
+install_browser_extensions "chromium"
 
 # TODO: Policies: https://github.com/arvigeus/nixos-config/blob/master/apps/chromium.nix
 
