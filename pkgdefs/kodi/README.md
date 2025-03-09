@@ -1,17 +1,17 @@
 # Kodi
 
-## Shortcuts
+## [Shortcuts](https://kodi.wiki/view/Keyboard_controls)
 
 - `\`: toggle fullscreen
 - `o`:  [Player process info](https://kodi.wiki/view/Player_process_info#Player_Process_Info)
 
-## Upscaling:
+## Upscaling
 
 - Go to `Settings -> Player -> Videos`
 - Set Render Method to `DXVA`
 - Activate `DXVA Video Super Resolution`
 
-## Add-ons:
+## Add-ons
 
 - Universal Movie Scraper
 - Missing Movies
