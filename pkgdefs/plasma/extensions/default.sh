@@ -18,7 +18,6 @@ paru -S --noconfirm --needed kwin-scripts-sticky-window-snapping-git
 kwriteconfig6 --file kwinrc --group Plugins --key sticky-window-snappingEnabled true
 
 paru -S --noconfirm --needed plasma6-applets-wallhaven-reborn-git
-source ./pkgdefs/plasma/extensions/wallheaven.sh
 
 paru -S --noconfirm --needed plasma6-applets-panel-colorizer
 

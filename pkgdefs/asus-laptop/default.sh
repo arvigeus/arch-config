@@ -31,4 +31,4 @@ echo "ryzen_smu" | sudo tee /etc/modules-load.d/ryzen_smu.conf
 # Test: sudo ryzenadj --info
 
 mkdir -p "$HOME/.local/bin/"
-cp -p ./pkgdefs/asus-laptop/performance_profile.sh "$HOME/.local/bin/performance_profile"
+cp -u -p ./pkgdefs/asus-laptop/performance_profile.sh "$HOME/.local/bin/performance_profile"
