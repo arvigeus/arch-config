@@ -26,13 +26,13 @@ paru -S --noconfirm --needed koi
 sudo pacman -S --noconfirm --needed kwin-scripts-krohnkite-git
 # kwriteconfig6 --file kwinrc --group Plugins --key krohnkiteEnabled true
 
-if ! echo "$INSTALLED_APPLETS" | grep -q "p-connor.plasma-drawer"; then
-    TMP=$(mktemp -d)
-    git clone --depth=1 https://github.com/p-connor/plasma-drawer.git "$TMP"
-    desktoptojson -i "$TMP/metadata.desktop" -o "$TMP/metadata.json"
-    kpackagetool6 -t Plasma/Applet -i "$TMP"
-    rm -rf "$TMP"
-fi
+# if ! echo "$INSTALLED_APPLETS" | grep -q "p-connor.plasma-drawer"; then
+#     TMP=$(mktemp -d)
+#     git clone --depth=1 https://github.com/p-connor/plasma-drawer.git "$TMP"
+#     desktoptojson -i "$TMP/metadata.desktop" -o "$TMP/metadata.json"
+#     kpackagetool6 -t Plasma/Applet -i "$TMP"
+#     rm -rf "$TMP"
+# fi
 
 if ! echo "$INSTALLED_APPLETS" | grep -q "com.github.antroids.application-title-bar"; then
     TMP=$(mktemp -d)
