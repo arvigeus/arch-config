@@ -93,17 +93,17 @@ kwriteconfig6 --file "kxkbrc" --group "Layout" --key "VariantList" ",phonetic"
 kwriteconfig5 --file "plasma-localerc" --group "Formats" --key "LANG" "en_US.UTF-8"
 
 # Shortcuts
-if [ ! -e "$HOME/.local/share/applications/rofi_menu.desktop" ]; then
+if [ ! -e "$HOME/.local/share/applications/rofi-commands.desktop" ]; then
     mkdir -p "$HOME/.local/share/applications"
-    cat > "$HOME/.local/share/applications/rofi_menu.desktop" <<EOF
+    cat > "$HOME/.local/share/applications/rofi-commands.desktop" <<EOF
 [Desktop Entry]
-Exec=/home/arvigeus/.local/bin/rofi_menu
-Name=rofi_menu
+Exec=rofi -show commands
+Name=rofi-commands
 NoDisplay=true
 Type=Application
 EOF
 fi
-kwriteconfig6 --file kglobalshortcutsrc --group "services" --group "rofi_menu.desktop" --key "_launch" "Meta+Space"
+kwriteconfig6 --file kglobalshortcutsrc --group "services" --group "rofi-commands.desktop" --key "_launch" "Meta+Space"
 
 cp -u -p ./pkgdefs/plasma/plasma-org.kde.plasma.desktop-appletsrc "$HOME/.config/plasma-org.kde.plasma.desktop-appletsrc"
 
