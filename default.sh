@@ -46,6 +46,7 @@ source ./pkgdefs/electron/default.sh
 
 source ./pkgdefs/zed/default.sh
 source ./pkgdefs/vscode/default.sh
+source ./pkgdefs/meld/default.sh
 source ./pkgdefs/micro/default.sh
 
 source ./pkgdefs/zen/default.sh
@@ -60,7 +61,6 @@ source ./pkgdefs/fastfetch/default.sh
 source ./pkgdefs/archive/default.sh
 source ./pkgdefs/fonts/default.sh
 
-source ./pkgdefs/programming/default.sh
 source ./pkgdefs/nodejs/default.sh
 source ./pkgdefs/deno/default.sh
 source ./pkgdefs/sqlite/default.sh
