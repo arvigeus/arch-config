@@ -40,7 +40,7 @@ configuration {
     display-systemd:            " Systemd";
     display-drun:               " Apps";
     display-filebrowser:        " Files";
-    display-location:           " Location";
+    display-location:           " Locations";
     drun-display-format:        "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
 
     kb-element-next: "Control+Tab";  /* Avoid conflict, rebind to Ctrl+Tab */

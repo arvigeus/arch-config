@@ -31,6 +31,12 @@ handle_command() {
         asusctl -c 100
         notify-send -a "Battery" "Charge limit: 100%" --icon="/usr/share/icons/breeze-dark/status/32/battery-100.svg"
         ;;
+    "󰍹 Display: Enable")
+        notify-send -a "eDP-2" "$(kscreen-doctor output.eDP-2.enable)"
+        ;;
+    "󰶐 Display: Disable")
+        notify-send -a "eDP-2" "$(kscreen-doctor output.eDP-2.disable)"
+        ;;
     esac
 }
 
@@ -67,6 +73,8 @@ cat <<EOF
 󰡴 Profile: Performance
  Battery: 80% limit
  Battery: 100% limit
+󰍹 Display: Enable
+󰶐 Display: Disable
 EOF
 
 exit 0
