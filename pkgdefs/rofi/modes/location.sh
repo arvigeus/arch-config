@@ -8,13 +8,13 @@ handle_command() {
         sudo reflector --country Vietnam --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
         sudo ln -sf /usr/share/zoneinfo/Asia/Ho_Chi_Minh /etc/localtime
         sudo hwclock --systohc
-        notify-send "Location" "Xin chào Việt Nam! 🇻🇳"
+        notify-send -a "Location" "Xin chào Việt Nam!" --icon="$HOME/.icons/flags/flag-vn.png"
         ;;
     "🇧🇬 Bulgaria")
         sudo reflector --country Bulgaria --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
         sudo ln -sf /usr/share/zoneinfo/Europe/Sofia /etc/localtime
         sudo hwclock --systohc
-        notify-send "Location" "Добре дошъл у дома! 🇧🇬"
+        notify-send -a "Location" "Добре дошъл у дома!" --icon="$HOME/.icons/flags/flag-bg.png"
         ;;
     esac
 }

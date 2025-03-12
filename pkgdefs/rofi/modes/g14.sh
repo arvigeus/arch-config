@@ -25,11 +25,11 @@ handle_command() {
         ;;
     " Battery: 80% limit")
         asusctl -c 80
-        notify-send "Battery" "Charge limit: 80%"
+        notify-send -a "Battery" "Charge limit: 80%" --icon="/usr/share/icons/breeze-dark/status/32/battery-080.svg"
         ;;
     " Battery: 100% limit")
         asusctl -c 100
-        notify-send "Battery" "Charge limit: 100%"
+        notify-send -a "Battery" "Charge limit: 100%" --icon="/usr/share/icons/breeze-dark/status/32/battery-100.svg"
         ;;
     esac
 }
@@ -50,7 +50,7 @@ profile_print_status() {
     status=$(printf "CPU mode: <b>%s</b>\nGraphics mode: <b>%s</b>\nDisplay: <b>%s</b>" \
         "$cpu_mode" "$gpu_mode" "$resolution")
 
-    notify-send "System Status" "$status"
+    notify-send -a "System Status" "$status"
 }
 
 # Check if a command was provided (this happens when user selects an option)
