@@ -22,7 +22,9 @@ DialogWidth=720
 positions={"2048x1280":[]}
 
 [Containments][2][Wallpaper][com.plasma.wallpaper.wallhaven][General]
-Query=landscape mountains
+Query=
+Sorting=toplist
+TopRange=1w
 WallpaperDelay=1800
 
 [Containments][3]
@@ -155,7 +157,9 @@ DialogWidth=720
 positions={"2560x1440":[]}
 
 [Containments][16][Wallpaper][com.plasma.wallpaper.wallhaven][General]
-Query=landscape mountains
+Query=
+Sorting=toplist
+TopRange=1w
 WallpaperDelay=1800
 currentWallpaperThumbnail=https://th.wallhaven.cc/small/vm/vme5om.jpg
 
