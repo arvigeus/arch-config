@@ -43,6 +43,10 @@ install_browser_extensions() {
     "https://addons.mozilla.org/en-US/firefox/addon/enhancer-for-youtube/"
     "https://chromewebstore.google.com/detail/enhancer-for-youtube/ponfpcnoihfmfllpaingbgckeeldkhle"
 
+    # SponsorBlock
+    "https://addons.mozilla.org/en-US/firefox/addon/sponsorblock/"
+    "https://chromewebstore.google.com/detail/sponsorblock-for-youtube/mnjggcdmjocbbbhaepdhchncahnbgone"
+
     # Search by image (Firefox only)
     "https://addons.mozilla.org/en-US/firefox/addon/search_by_image/"
 
