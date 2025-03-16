@@ -3,7 +3,7 @@
 source ./pkgdefs/pacman/chaotic_aur.sh
 source ./pkgdefs/pacman/aur.sh
 
-sudo pacman -S --needed --noconfirm pacman-contrib
+sudo pacman -S --needed --noconfirm pacman-contrib reflector
 
 source ./pkgdefs/pacman/hooks.sh
 
