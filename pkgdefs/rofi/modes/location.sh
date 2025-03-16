@@ -1,51 +1,68 @@
 #!/bin/bash
 
-# Function to handle command execution
-handle_command() {
-    local cmd="$1"
-    case "$cmd" in
-    "🇻🇳 Vietnam")
-        sudo reflector --country Vietnam --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
+# shellcheck disable=SC2317
 
-        sudo ln -sf /usr/share/zoneinfo/Asia/Ho_Chi_Minh /etc/localtime
-        sudo hwclock --systohc
+# Define menu items ("Label" "Function Name")
+MENU_ITEMS=(
+    "🇻🇳 Vietnam|set_vietnam"
+    "🇧🇬 Bulgaria|set_bulgaria"
+)
 
-        sed -i '/^source=wettercom|weather|/c\source=wettercom|weather|Ha Long, Tinh Quang Ninh, VN|VN1580410;Ha Long' "$HOME/.config/plasma-org.kde.plasma.desktop-appletsrc" "$HOME/.config/plasmashellrc"
-        (sleep 1 && kquitapp6 plasmashell && sleep 2 && plasmashell --replace &) >/dev/null 2>&1
+# Function to set up Vietnam environment
+set_vietnam() {
+    sudo reflector --country Vietnam --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 
-        sudo systemctl enable warp-svc.service --now
-        sleep 1
-        warp-cli connect
+    sudo ln -sf /usr/share/zoneinfo/Asia/Ho_Chi_Minh /etc/localtime
+    sudo hwclock --systohc
 
-        notify-send -a "Location" "Xin chào Việt Nam!" --icon="$HOME/.icons/flags/flag-vn.png"
-        ;;
-    "🇧🇬 Bulgaria")
-        sudo reflector --country Bulgaria --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
+    sed -i '/^source=wettercom|weather|/c\source=wettercom|weather|Ha Long, Tinh Quang Ninh, VN|VN1580410;Ha Long' \
+        "$HOME/.config/plasma-org.kde.plasma.desktop-appletsrc" "$HOME/.config/plasmashellrc"
+    
+    (sleep 1 && kquitapp6 plasmashell && sleep 2 && plasmashell --replace &) >/dev/null 2>&1
 
-        sudo ln -sf /usr/share/zoneinfo/Europe/Sofia /etc/localtime
-        sudo hwclock --systohc
+    sudo systemctl enable warp-svc.service --now
+    sleep 1
+    warp-cli connect
 
-        sed -i '/^source=wettercom|weather|/c\source=wettercom|weather|Yantra, Oblast Gabrovo, BG|BG0725565;Yantra' "$HOME/.config/plasma-org.kde.plasma.desktop-appletsrc" "$HOME/.config/plasmashellrc"
-        (sleep 1 && kquitapp6 plasmashell && sleep 2 && plasmashell --replace &) >/dev/null 2>&1
-
-        warp-cli disconnect
-        sudo systemctl disable warp-svc.service
-
-        notify-send -a "Location" "Добре дошъл у дома!" --icon="$HOME/.icons/flags/flag-bg.png"
-        ;;
-    esac
+    notify-send -a "Location" "Xin chào Việt Nam!" --icon="$HOME/.icons/flags/flag-vn.png"
 }
 
-# Check if a command was provided (this happens when user selects an option)
-if [ -n "$1" ]; then
-    handle_command "$1"
-    exit 0
-fi
+# Function to set up Bulgaria environment
+set_bulgaria() {
+    sudo reflector --country Bulgaria --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 
-# If no arguments, print the menu items (Rofi will call the script this way first)
-cat <<EOF
-🇻🇳 Vietnam
-🇧🇬 Bulgaria
-EOF
+    sudo ln -sf /usr/share/zoneinfo/Europe/Sofia /etc/localtime
+    sudo hwclock --systohc
+
+    sed -i '/^source=wettercom|weather|/c\source=wettercom|weather|Yantra, Oblast Gabrovo, BG|BG0725565;Yantra' \
+        "$HOME/.config/plasma-org.kde.plasma.desktop-appletsrc" "$HOME/.config/plasmashellrc"
+
+    (sleep 1 && kquitapp6 plasmashell && sleep 2 && plasmashell --replace &) >/dev/null 2>&1
+
+    warp-cli disconnect
+    sudo systemctl disable warp-svc.service
+
+    notify-send -a "Location" "Добре дошъл у дома!" --icon="$HOME/.icons/flags/flag-bg.png"
+}
+
+# Function to handle command execution
+handle_command() {
+    for item in "${MENU_ITEMS[@]}"; do
+        IFS="|" read -r label function_name <<<"$item"
+        if [[ "$1" == "$label" ]]; then
+            "$function_name"
+            exit 0
+        fi
+    done
+}
+
+# If a command was provided, execute it
+[ -n "$1" ] && handle_command "$1"
+
+# Otherwise, print menu for Rofi
+for item in "${MENU_ITEMS[@]}"; do
+    IFS="|" read -r label _ <<<"$item"
+    echo "$label"
+done
 
 exit 0
