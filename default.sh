@@ -8,6 +8,8 @@ source ./pkgdefs/pacman/default.sh
 source ./pkgdefs/flatpak/default.sh
 source ./pkgdefs/appimage/default.sh
 
+source ./pkgdefs/systemd/default.sh
+
 source ./pkgdefs/ufw/default.sh
 source ./pkgdefs/cloudflare/default.sh
 
@@ -69,5 +71,7 @@ source ./pkgdefs/bash/default.sh
 source ./pkgdefs/rofi/default.sh
 source ./pkgdefs/eza/default.sh
 source ./pkgdefs/bat/default.sh
+
+source ./pkgdefs/ai/default.sh
 
 source ./todo.sh
