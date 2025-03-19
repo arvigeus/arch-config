@@ -2,6 +2,7 @@
 
 # Creates isolated web applications with dedicated browser profiles
 # Usage: create_web_app "AppName" "https://example.com" ["Network;Web;"] ["chromium"]
+# Based on: https://github.com/linuxmint/webapp-manager/blob/master/usr/lib/webapp-manager/common.py
 create_web_app() {
     # Parse arguments with defaults
     local app_name=$1
