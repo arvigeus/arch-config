@@ -1,9 +1,9 @@
 #!/bin/bash
 
 sudo pacman -S --needed --noconfirm arch-update
-arch-update --tray --enable
-systemctl --user enable --now arch-update.timer
-# TODO: `systemctl --user edit --full arch-update.timer` and removeOnUnitActiveSec
+# arch-update --tray --enable
+# systemctl --user enable --now arch-update.timer
+# NOTE: `systemctl --user edit --full arch-update.timer` and removeOnUnitActiveSec
 
 INSTALLED_APPLETS=$(kpackagetool6 --list --type Plasma/Applet)
 
