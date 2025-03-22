@@ -34,6 +34,9 @@ sudo pacman -S --needed --noconfirm \
     glfw \
     opencl-icd-loader lib32-opencl-icd-loader
 
+# Vapor theme
+paru -S --noconfirm --needed plasma6-themes-vapor-steamos
+
 create_steam_minimal_shortcut() {
   local Mode=$1
   local mode="${1,,}"
