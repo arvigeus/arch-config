@@ -52,6 +52,7 @@ source ./pkgdefs/meld/default.sh
 source ./pkgdefs/micro/default.sh
 
 source ./pkgdefs/zen/default.sh
+source ./pkgdefs/firefox/default.sh
 source ./pkgdefs/chromium/default.sh
 source ./pkgdefs/tor/default.sh
 
@@ -73,5 +74,3 @@ source ./pkgdefs/eza/default.sh
 source ./pkgdefs/bat/default.sh
 
 source ./pkgdefs/ai/default.sh
-
-source ./todo.sh

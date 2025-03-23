@@ -1,0 +1,13 @@
+{
+    "KPlugin": {
+        "Category": "",
+        "Description": "It's not a Lake, it's an Ocean",
+        "EnabledByDefault": true,
+        "Id": "dark-ocean",
+        "License": "LGPL",
+        "Name": "Dark Ocean",
+        "Version": "0.1.0",
+        "Website": "https://github.com/Binaryify/OneDark-Pro"
+    },
+    "X-Plasma-API": "5.0"
+}

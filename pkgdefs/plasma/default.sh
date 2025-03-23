@@ -18,3 +18,4 @@ paru -S --noconfirm --needed kwin-gestures
 source ./pkgdefs/plasma/extensions/default.sh
 
 source ./pkgdefs/plasma/config.sh
+source ./pkgdefs/plasma/theme.sh
