@@ -3,7 +3,7 @@
 paru -S --noconfirm --needed cloudflare-warp-bin
 sudo systemctl enable warp-svc.service --now
 
-sleep 1
+sleep 3
 
 # Add local network ranges to split tunnel
 # This allows apps like KDE Connect to function
@@ -19,3 +19,5 @@ warp-cli tunnel ip add-range 10.0.0.0/8
 
 warp-cli registration new
 warp-cli connect
+
+sleep 3

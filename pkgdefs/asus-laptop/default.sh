@@ -19,6 +19,9 @@ mkdir -p "$HOME/.config/autostart"
 if [ ! -L "$SYMLINK" ]; then
     ln -s /usr/share/applications/rog-control-center.desktop "$HOME/.config/autostart/rog-control-center.desktop"
 fi
+mkdir -p "$HOME/.config/rog/"
+cp -u -p ./pkgdefs/asus-laptop/config/rog-control-center.cfg "$HOME/.config/rog/rog-control-center.cfg"
+
 
 sudo pacman -S --needed --noconfirm lact
 sudo systemctl enable --now lactd

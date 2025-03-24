@@ -13,10 +13,10 @@
  **/
 
 * {
-    background:     #262626FF;
-    background-alt: #303030FF;
+    background:     #21252BFF;
+    background-alt: #282C34FF;
     foreground:     #FFFFFFFF;
-    selected:       #61AFEFFF;
+    selected:       #4D78CCFF;
     active:         #98C379FF;
     urgent:         #E06C75FF;
 }
