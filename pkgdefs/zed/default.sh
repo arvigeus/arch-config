@@ -1,4 +1,5 @@
 #!/bin/bash
 
 sudo pacman -S --needed --noconfirm zed
-cp -u -p ./pkgdefs/vscode/settings.json "$HOME/.config/zed/settings.json"
+mkdir -p "$HOME/.config/zed"
+cp -u -p ./pkgdefs/zed/settings.json "$HOME/.config/zed/settings.json"

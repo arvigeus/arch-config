@@ -40,5 +40,3 @@ if ! echo "$INSTALLED_APPLETS" | grep -q "com.github.antroids.application-title-
     kpackagetool6 -t Plasma/Applet -i "$TMP/package"
     rm -rf "$TMP"
 fi
-
-qdbus org.kde.KWin /KWin reconfigure

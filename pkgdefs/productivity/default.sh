@@ -1,6 +1,6 @@
 #!/bin/bash
 
-flatpak install flathub org.onlyoffice.desktopeditors
+flatpak install -y flathub org.onlyoffice.desktopeditors
 #flatpak install -y flathub org.libreoffice.LibreOffice
 #sudo pacman -S --needed --noconfirm wps-office
 

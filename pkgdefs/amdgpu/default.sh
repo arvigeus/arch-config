@@ -6,6 +6,7 @@ sudo pacman -S --needed --noconfirm amd-ucode mesa lib32-mesa vulkan-radeon lib3
 sudo pacman -S --needed --noconfirm rocm-opencl-runtime rocm-hip-runtime
 
 mkdir -p "$HOME/.config/environment.d"
+touch "$HOME/.env"
 if ! grep -qxF 'AMD_VULKAN_ICD=RADV' "$HOME/.env"; then
     echo "AMD_VULKAN_ICD=RADV" > "$HOME/.config/environment.d/vulkan.conf"
     echo 'AMD_VULKAN_ICD=RADV' >> "$HOME/.env"

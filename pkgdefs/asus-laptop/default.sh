@@ -7,7 +7,7 @@ if ! grep -q "\[g14\]" /etc/pacman.conf; then
     sudo pacman-key --lsign-key 8F654886F17D497FEFE3DB448B15A6B0E9A3FA35
     sudo pacman-key --finger 8F654886F17D497FEFE3DB448B15A6B0E9A3FA35
     echo -e "\n[g14]\nServer = https://arch.asus-linux.org\n" | sudo tee -a /etc/pacman.conf
-    sudo pacman -Suy
+    sudo pacman -Suy --noconfirm
 fi
 
 sudo pacman -S --needed --noconfirm asusctl rog-control-center power-profiles-daemon supergfxctl switcheroo-control

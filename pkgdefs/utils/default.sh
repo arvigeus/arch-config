@@ -1,3 +1,4 @@
 #!/bin/bash
 
-sudo pacman -S --needed --noconfirm jq bc evtest whois wget less
+# bind: allows dig
+sudo pacman -S --needed --noconfirm jq bc evtest whois bind wget less

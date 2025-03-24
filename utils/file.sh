@@ -11,5 +11,4 @@ file_add_line() {
     if ! grep -Fxq -- "$line" "$file"; then
         echo "$line" >>"$file"
     fi
-
 }

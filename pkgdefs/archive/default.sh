@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo pacman -S --needed --noconfirm 7zip unrar zip
+sudo pacman -S --needed --noconfirm 7zip unrar unzip
