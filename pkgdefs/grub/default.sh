@@ -5,13 +5,10 @@
 #   - GRUB_CMDLINE_LINUX: change `cryptdevice=UUID=<uuid>:<name>` to `rd.luks.name=<uuid>=<name>` (replaced `cryptdevice=UUID` with `rd.luks.name` and `:<name>` with `=<name>`)
 #   - GRUB_CMDLINE_LINUX_DEFAULT: add `splash`
 
-# TODO: Hide menu:
-# GRUB_TIMEOUT_STYLE=hidden
+sudo sed -i 's/^GRUB_TIMEOUT=.*/GRUB_TIMEOUT=3/' /etc/default/grub
+sudo sed -i 's/^GRUB_TIMEOUT_STYLE=.*/GRUB_TIMEOUT_STYLE=hidden/' /etc/default/grub
+sudo sed -i 's|^GRUB_CMDLINE_LINUX_DEFAULT=.*|GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet splash mitigations=off"|' /etc/default/grub
 
-# TODO: Reduce countdown
-# GRUB_TIMEOUT=3
+sudo cp -u -p ./pkgdefs/grub/update-grub.sh /usr/sbin/update-grub
 
-# TODO: mitigations: off
-# GRUB_CMDLINE_LINUX_DEFAULT: add `mitigations=off`
-
-# sudo grub-mkconfig -o /boot/grub/grub.cfg
+sudo update-grub
