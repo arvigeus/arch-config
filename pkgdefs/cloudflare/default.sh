@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# cloudflare-warp-bin has problem with logging out DE
 paru -S --noconfirm --needed cloudflare-warp-nox-bin
 sudo systemctl enable warp-svc.service --now
 
