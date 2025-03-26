@@ -17,11 +17,14 @@ MENU_ITEMS=(
 
 # WARP functions
 warp_connect() {
+    sudo systemctl start warp-svc.service
+    sleep 0.2
     notify-send -a "WARP" "Connect: $(warp-cli connect)" --icon="/usr/share/icons/hicolor/scalable/apps/zero-trust-connected.svg"
 }
 
 warp_disconnect() {
     notify-send -a "WARP" "Disconnect: $(warp-cli disconnect)" --icon="/usr/share/icons/hicolor/scalable/apps/zero-trust-disconnected.svg"
+    sudo systemctl stop warp-svc.service
 }
 
 warp_status() {

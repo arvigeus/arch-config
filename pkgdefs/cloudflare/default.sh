@@ -1,6 +1,6 @@
 #!/bin/bash
 
-paru -S --noconfirm --needed cloudflare-warp-bin
+paru -S --noconfirm --needed cloudflare-warp-nox-bin
 sudo systemctl enable warp-svc.service --now
 
 sleep 3

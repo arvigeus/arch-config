@@ -20,10 +20,6 @@ set_vietnam() {
     
     (sleep 1 && kquitapp6 plasmashell && sleep 2 && plasmashell --replace &) >/dev/null 2>&1
 
-    sudo systemctl enable warp-svc.service --now
-    sleep 1
-    warp-cli connect
-
     notify-send -a "Location" "Xin chào Việt Nam!" --icon="$HOME/.icons/flags/flag-vn.png"
 }
 
@@ -38,9 +34,6 @@ set_bulgaria() {
         "$HOME/.config/plasma-org.kde.plasma.desktop-appletsrc" "$HOME/.config/plasmashellrc"
 
     (sleep 1 && kquitapp6 plasmashell && sleep 2 && plasmashell --replace &) >/dev/null 2>&1
-
-    warp-cli disconnect
-    sudo systemctl disable warp-svc.service
 
     notify-send -a "Location" "Добре дошъл у дома!" --icon="$HOME/.icons/flags/flag-bg.png"
 }
