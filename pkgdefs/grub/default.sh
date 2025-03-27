@@ -10,5 +10,15 @@ sudo sed -i 's/^GRUB_TIMEOUT_STYLE=.*/GRUB_TIMEOUT_STYLE=hidden/' /etc/default/g
 sudo sed -i 's|^GRUB_CMDLINE_LINUX_DEFAULT=.*|GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet splash mitigations=off"|' /etc/default/grub
 
 sudo cp -u -p ./pkgdefs/grub/update-grub.sh /usr/sbin/update-grub
+sudo chmod +x /usr/sbin/update-grub
 
+# THEME
+sudo pacman -S --needed --noconfirm imagemagick
+[[ -d /boot/grub/themes/bgrt-grub-theme ]] && sudo rm -rf /boot/grub/themes/bgrt-grub-theme
+TMP=$(mktemp -d)
+git clone https://github.com/arvigeus/bgrt-grub-theme.git "$TMP"
+chmod +x "$TMP/install.sh"
+(cd "$TMP" && sudo ./install.sh)
+rm -rf "$TMP"
+# GRUB is updated by theme installation, but update-grub applies some manual tweaks
 sudo update-grub
