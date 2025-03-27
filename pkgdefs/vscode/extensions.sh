@@ -15,8 +15,6 @@ code --install-extension gruntfuggly.todo-tree
 ## Color schemes
 ### "workbench.colorTheme": "One Dark Pro Mix"
 code --install-extension zhuangtongfa.material-theme
-### "workbench.colorTheme": "Adwaita Dark & Github syntax highlighting",
-#code --install-extension egirlcatnip.adwaita-github-theme
 
 ## Web Dev
 code --install-extension dbaeumer.vscode-eslint

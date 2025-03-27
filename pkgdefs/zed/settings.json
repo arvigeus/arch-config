@@ -11,15 +11,18 @@
   "buffer_font_size": 16,
   "theme": {
     "mode": "system",
-    "light": "Adwaita Pastel Light",
-    "dark": "Adwaita Pastel Dark"
+    "light": "One Light",
+    "dark": "One Dark Pro"
   },
   "auto_install_extensions": {
     "html": true,
     "basher": true,
+    "stylelint": true,
     "deno": true,
     "csharp": true,
+    "graphql": true,
     "toml": true,
-    "adwaita-pastel": true
+    "env": true,
+    "one-dark-pro": true
   }
 }
