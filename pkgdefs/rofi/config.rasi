@@ -14,7 +14,7 @@
 
 * {
     background:     #21252BFF;
-    background-alt: #282C34FF;
+    background-alt: #404754FF;
     foreground:     #FFFFFFFF;
     selected:       #4D78CCFF;
     active:         #98C379FF;
@@ -55,13 +55,13 @@ configuration {
     foreground-colour:           var(foreground);
     alternate-background:        var(background-alt);
     normal-background:           var(background);
-    normal-foreground:           var(foreground);
+    normal-foreground:           #ABB2BF;
     urgent-background:           var(urgent);
     urgent-foreground:           var(background);
     active-background:           var(active);
     active-foreground:           var(background);
     selected-normal-background:  var(selected);
-    selected-normal-foreground:  var(background);
+    selected-normal-foreground:  var(foreground);
     selected-urgent-background:  var(active);
     selected-urgent-foreground:  var(background);
     selected-active-background:  var(urgent);
@@ -77,8 +77,8 @@ configuration {
     screen-margin:               275px 400px;
     box-spacing:                 20px;
     list-padding:                8px;
-    element-padding:             15px;
-    element-radius:              8px;
+    element-padding:             7px;
+    element-radius:              1px;
     element-spacing:             15px;
 }
 
@@ -120,9 +120,9 @@ mainbox {
     spacing:                     @box-spacing;
     margin:                      @screen-margin;
     padding:                     10px;
-    border:                      0px solid;
-    border-radius:               @element-radius;
-    border-color:                @border-colour;
+    border:                      1px solid;
+    border-radius:               8px;
+    border-color:                rgba(232, 232, 232, 0.25);
     background-color:            @background-colour;
     children:                    [ "inputbar", "message", "listview" ];
 }
@@ -218,7 +218,7 @@ listview {
 scrollbar {
     handle-width:                8px ;
     handle-color:                @handle-colour;
-    border-radius:               @element-radius;
+    border-radius:               8px;
     background-color:            @alternate-background;
 }
 
@@ -261,7 +261,7 @@ element selected.active {
 }
 element alternate.normal {
     background-color:            var(alternate-normal-background);
-    text-color:                  var(alternate-normal-foreground);
+    text-color:                  var(normal-foreground);
 }
 element alternate.urgent {
     background-color:            var(alternate-urgent-background);
@@ -305,7 +305,7 @@ button {
     border-radius:               @element-radius;
     border-color:                @border-colour;
     background-color:            @alternate-background;
-    text-color:                  inherit;
+    text-color:                  var(normal-foreground);
     cursor:                      pointer;
 }
 button selected {
