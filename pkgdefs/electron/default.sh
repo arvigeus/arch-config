@@ -1,5 +1,5 @@
 #!/bin/bash
 
-if ! grep -qxF 'ELECTRON_OZONE_PLATFORM_HINT=wayland' "$HOME/.env"; then
-    echo 'ELECTRON_OZONE_PLATFORM_HINT=wayland' >> "$HOME/.env"
-fi
+mkdir -p "$HOME/.config/environment.d"
+cp -u -p ./pkgdefs/electron/env.conf "$HOME/.config/environment.d/electron.conf"
+systemctl --user daemon-reexec

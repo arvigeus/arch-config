@@ -22,5 +22,3 @@ alias mv='mv -i'
 alias cls='printf "\033c" && clear && echo -en "\e[3J"'
 
 export PATH="$HOME/.local/bin:$PATH"
-export "$(envsubst < ~/.env)"
-# [ -f .env ] && export $(envsubst < .env)

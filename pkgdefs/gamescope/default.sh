@@ -15,7 +15,9 @@ sudo usermod -aG video "$USER"
 
 flatpak install -y flathub org.freedesktop.Platform.VulkanLayer.gamescope/x86_64/24.08
 
-file_add_line "SteamDeck=1" "$HOME/.env"
+mkdir -p "$HOME/.config/environment.d"
+cp -u -p ./pkgdefs/gamescope/env.conf "$HOME/.config/environment.d/gamescope.conf"
+systemctl --user daemon-reexec
 
 # Steam Gamescope Session
 sudo cp -u -p ./pkgdefs/gamescope/gamescope-session.sh /usr/bin/gamescope-session
