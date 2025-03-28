@@ -6,6 +6,12 @@ profile_powersave() {
         kscreen-doctor output.eDP-2.mode.2560x1600@60  &> /dev/null
     fi
     powertop --auto-tune &> /dev/null
+
+    mkdir -p ~/.config/environment.d
+    echo "MESA_VK_DEVICE_SELECT=1002:1681!" > ~/.config/environment.d/powersave.conf
+    systemctl --user daemon-reexec
+    rm ~/.config/environment.d/powersave.conf
+
 }
 
 profile_balanced() {
@@ -13,6 +19,8 @@ profile_balanced() {
     if kscreen-doctor -o | grep -A3 "eDP-2" | grep -q "enabled"; then
         kscreen-doctor output.eDP-2.mode.2560x1600@120 &> /dev/null
     fi
+
+    systemctl --user daemon-reexec
 }
 
 # Main function to handle arguments

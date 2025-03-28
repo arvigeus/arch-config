@@ -8,7 +8,7 @@ fi
 
 # Power Management
 kwriteconfig6 --file powerdevilrc --group "AC" --group "Performance" --key "PowerProfile" "balanced"
-kwriteconfig6 --file powerdevilrc --group "AC" --group "RunScript" --key "ProfileLoadCommand" "/home/arvigeus/.local/bin/performance_profile balanced\n"
+kwriteconfig6 --file powerdevilrc --group "AC" --group "RunScript" --key "ProfileLoadCommand" "/home/arvigeus/.local/bin/performance_profile balanced"
 kwriteconfig6 --file powerdevilrc --group "AC" --group "RunScript" --key "ProfileUnloadCommand" "/home/arvigeus/.local/bin/performance_profile powersave"
 kwriteconfig6 --file powerdevilrc --group "AC" --group "SuspendAndShutdown" --key "AutoSuspendAction" "0"
 kwriteconfig6 --file powerdevilrc --group "AC" --group "SuspendAndShutdown" --key "LidAction" "64"
