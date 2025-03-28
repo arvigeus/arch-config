@@ -15,6 +15,8 @@ set_vietnam() {
     sudo ln -sf /usr/share/zoneinfo/Asia/Ho_Chi_Minh /etc/localtime
     sudo hwclock --systohc
 
+    grep -qxF '185.199.108.154 github.githubassets.com' /etc/hosts || echo '185.199.108.154 github.githubassets.com' | sudo tee -a /etc/hosts > /dev/null
+
     sed -i '/^source=wettercom|weather|/c\source=wettercom|weather|Ha Long, Tinh Quang Ninh, VN|VN1580410;Ha Long' \
         "$HOME/.config/plasma-org.kde.plasma.desktop-appletsrc" "$HOME/.config/plasmashellrc"
     
@@ -29,6 +31,8 @@ set_bulgaria() {
 
     sudo ln -sf /usr/share/zoneinfo/Europe/Sofia /etc/localtime
     sudo hwclock --systohc
+
+    sudo sed -i '/185\.199\.108\.154 github\.githubassets\.com/d' /etc/hosts
 
     sed -i '/^source=wettercom|weather|/c\source=wettercom|weather|Yantra, Oblast Gabrovo, BG|BG0725565;Yantra' \
         "$HOME/.config/plasma-org.kde.plasma.desktop-appletsrc" "$HOME/.config/plasmashellrc"

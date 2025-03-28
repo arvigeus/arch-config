@@ -1,5 +1,7 @@
 #!/bin/bash
 
+grep -qxF '185.199.108.154 github.githubassets.com' /etc/hosts || echo '185.199.108.154 github.githubassets.com' | sudo tee -a /etc/hosts > /dev/null
+
 # cloudflare-warp-bin has problem with logging out DE
 paru -S --noconfirm --needed cloudflare-warp-nox-bin
 sudo systemctl enable warp-svc.service --now
