@@ -27,3 +27,5 @@ sudo chmod +x /usr/bin/steamos-session-select
 sudo cp -u -p ./pkgdefs/gamescope/gamescope.desktop /usr/share/wayland-sessions/gamescope.desktop
 sudo cp -u -p ./pkgdefs/gamescope/steam-big-picture.desktop /usr/share/wayland-sessions/steam-big-picture.desktop
 sudo setcap 'CAP_SYS_NICE=eip' "$(which gamescope)"
+
+source ./pkgdefs/gamescope/steam.sh
