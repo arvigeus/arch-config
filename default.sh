@@ -64,6 +64,7 @@ source ./pkgdefs/fastfetch/default.sh
 source ./pkgdefs/archive/default.sh
 source ./pkgdefs/fonts/default.sh
 
+source ./pkgdefs/make/default.sh
 source ./pkgdefs/nodejs/default.sh
 source ./pkgdefs/deno/default.sh
 source ./pkgdefs/sqlite/default.sh
