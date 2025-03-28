@@ -20,6 +20,7 @@ profile_balanced() {
         kscreen-doctor output.eDP-2.mode.2560x1600@120 &> /dev/null
     fi
 
+    rm ~/.config/environment.d/powersave.conf
     systemctl --user daemon-reexec
 }
 
