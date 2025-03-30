@@ -10,7 +10,6 @@ profile_powersave() {
     mkdir -p ~/.config/environment.d
     echo "MESA_VK_DEVICE_SELECT=1002:1681!" > ~/.config/environment.d/powersave.conf
     systemctl --user daemon-reexec
-    rm ~/.config/environment.d/powersave.conf
 
 }
 
@@ -20,8 +19,10 @@ profile_balanced() {
         kscreen-doctor output.eDP-2.mode.2560x1600@120 &> /dev/null
     fi
 
-    rm ~/.config/environment.d/powersave.conf
-    systemctl --user daemon-reexec
+    if [ -f ~/.config/environment.d/powersave.conf ]; then
+        rm ~/.config/environment.d/powersave.conf
+        systemctl --user daemon-reexec
+    fi
 }
 
 # Main function to handle arguments
