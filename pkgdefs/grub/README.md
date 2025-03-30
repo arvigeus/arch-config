@@ -1,11 +1,11 @@
 # Grub
 
-## Mitigations
+## CPU Mitigations
 
 To check CPU vulnerabilities (while filtering out `Not affected` entries):
 
 ```sh
-grep . /sys/devices/system/cpu/vulnerabilities/* | grep -v "Not affected"
+grep . /sys/devices/system/cpu/vulnerabilities/* | grep -v ":Not affected"
 
 ```
 
