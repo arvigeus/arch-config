@@ -1,0 +1,52 @@
+{
+    "Name": "Default",
+    "Version": 1,
+    "Widgets": [
+        {
+            "SplitterVertical": {
+                "State": "AAAA/wAAAAEAAAACAAAAIAAAAz0A/////wEAAAACAA==",
+                "Widgets": [
+                    {
+                        "SplitterHorizontal": {
+                            "State": "AAAA/wAAAAEAAAACAAAAkgAAANMA/////wEAAAABAA==",
+                            "Widgets": [
+                                {
+                                    "SearchBar": {
+                                        "AutoSearch": true,
+                                        "SearchMode": 0
+                                    }
+                                },
+                                {
+                                    "SplitterHorizontal": {
+                                        "State": "AAAA/wAAAAEAAAACAAACPwAAAHAA/////wEAAAABAA==",
+                                        "Widgets": [
+                                            {
+                                                "SeekBar": {
+                                                    "ElapsedTotal": false,
+                                                    "ShowLabels": true
+                                                }
+                                            },
+                                            {
+                                                "PlayerControls": {
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "Playlist": {
+                            "Columns": "8:132|1|7:2|2|5",
+                            "HeaderState": "AAAAZXjaY2BgYGVgYLBjYGCSA9JOQPyHgYHRhQEiDgKMQMwMxCxAzAQSt19Zcv7gdJ8/9revnFCVz7xiv1qmjvVEGIv9yQ9mildVLewvLPgsyMVvCNLI8B8IAO5gGCM=",
+                            "ID": "ade60cf7961e4058bdcfb92691dec1be",
+                            "Preset": 0,
+                            "SingleMode": false
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}
