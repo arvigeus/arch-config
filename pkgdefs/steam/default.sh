@@ -37,6 +37,10 @@ sudo pacman -S --needed --noconfirm \
 # Vapor theme
 paru -S --noconfirm --needed plasma6-themes-vapor-steamos
 
+sudo pacman -S --needed --noconfirm steamtinkerlaunch
+
+source ./pkgdefs/steam/add-to-steam/default.sh
+
 create_steam_minimal_shortcut() {
   local Mode=$1
   local mode="${1,,}"

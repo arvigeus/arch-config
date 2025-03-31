@@ -9,7 +9,7 @@ pkg:
 	@source ./pkgdefs/$(name)/default.sh
 
 sh:
-	@find ./pkgdefs/ ./utils/ -type f -name "*.sh" -exec chmod +x {} \;
+	@find ./pkgdefs/ ./utils/ \( -name "*.sh" -o -name "*.desktop" \) -type f -exec chmod +x {} \;
 	@find ./pkgdefs/ -type f -exec touch {} \;
 
 .PHONY: default pkg sh
