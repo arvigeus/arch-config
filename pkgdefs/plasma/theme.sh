@@ -15,3 +15,5 @@ cp ./pkgdefs/plasma/theme/DarkOcean.colors "$HOME/.local/share/color-schemes/Dar
 # Copy the color scheme file
 mkdir -p "$HOME/.local/share/konsole"
 cp ./pkgdefs/plasma/theme/konsole/DarkOcean.colorscheme "$HOME/.local/share/konsole/DarkOcean.colorscheme"
+
+source ./pkgdefs/plasma/theme/sddm/default.sh
