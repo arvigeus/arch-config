@@ -105,7 +105,5 @@ EOF
 fi
 kwriteconfig6 --file kglobalshortcutsrc --group "services" --group "rofi-commands.desktop" --key "_launch" "Meta+Space"
 
-cp -u -p ./pkgdefs/plasma/plasma-org.kde.plasma.desktop-appletsrc "$HOME/.config/plasma-org.kde.plasma.desktop-appletsrc"
-
 # Restart plasmashell to apply changes
 (sleep 1 && kquitapp6 plasmashell && sleep 2 && plasmashell --replace &) >/dev/null 2>&1 &
