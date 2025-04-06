@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo "FW up to date"
+exit 7
