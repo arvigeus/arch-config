@@ -17,7 +17,7 @@ FILES="./pkgdefs/gamescope/session/files"
 # Make all files in '$FILES' executable
 find "$FILES" -type f -exec chmod +x {} \;
 # Move contents of '$FILES' to '/'
-sudo rsync -a --info=progress2 "$FILES"/ / --inplace
+sudo rsync -a --no-o --no-g --chown=root:root "$FILES"/ /
 # Misc
 sudo mkdir -p /etc/gamescope/scripts
 mkdir -p "$HOME/.config/gamescope/scripts"
