@@ -4,12 +4,10 @@ set -v
 # shellcheck disable=SC3045
 ulimit -n 524288
 
-# asusctl profile -P Performance
-
-# Max TDP is supposedly 100, but 40-50 have measurable effect
-[ -n "$GAMESCOPE_TDP_LIMIT" ] && sudo ryzenadj --stapm-limit="${GAMESCOPE_TDP_LIMIT}000" --fast-limit="${GAMESCOPE_TDP_LIMIT}000" --slow-limit="${GAMESCOPE_TDP_LIMIT}000"
-
 sudo systemctl start plugin_loader.service
+
+asusctl profile -P Performance
+sudo ryzenadj --tctl-temp=85
 
 # Enable logging
 # exec > /tmp/gamescope-session.log 2>&1

@@ -2,4 +2,4 @@
 
 steam -shutdown
 sudo systemctl start plugin_loader.service
-# asusctl profile -P Balanced
+asusctl profile -P Balanced
