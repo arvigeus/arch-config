@@ -88,6 +88,10 @@ Filters can be changed while the game is running:
 
 Go to the game page, select settings, and set specific resolution
 
+### Decky Loader is not enabled
+
+`Settings -> System -> Enable Developer Mode`
+
 ## Apps
 
 ### Firefox

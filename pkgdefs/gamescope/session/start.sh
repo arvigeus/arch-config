@@ -7,7 +7,7 @@ ulimit -n 524288
 # asusctl profile -P Performance
 
 # Max TDP is supposedly 100, but 40-50 have measurable effect
-[ -n "$TDP_LIMIT" ] && sudo ryzenadj --stapm-limit="${TDP_LIMIT}000" --fast-limit="${TDP_LIMIT}000" --slow-limit="${TDP_LIMIT}000"
+[ -n "$GAMESCOPE_TDP_LIMIT" ] && sudo ryzenadj --stapm-limit="${GAMESCOPE_TDP_LIMIT}000" --fast-limit="${GAMESCOPE_TDP_LIMIT}000" --slow-limit="${GAMESCOPE_TDP_LIMIT}000"
 
 sudo systemctl start plugin_loader.service
 
