@@ -35,7 +35,7 @@ source ./pkgdefs/brew/default.sh
 source ./pkgdefs/media/default.sh
 source ./pkgdefs/mpv/default.sh
 source ./pkgdefs/vlc/default.sh
-#source ./pkgdefs/kodi/default.sh
+source ./pkgdefs/kodi/default.sh
 source ./pkgdefs/yt-dlp/default.sh
 source ./pkgdefs/GIMP/default.sh
 source ./pkgdefs/fooyin/default.sh
