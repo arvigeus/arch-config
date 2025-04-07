@@ -18,3 +18,12 @@
 - [Missing Movies](https://kodi.wiki/view/Add-on:Missing_Movies)
 - [Metadata Editor](https://kodi.wiki/view/Add-on:Metadata_Editor)
 - [a4kSubtitles](https://github.com/a4k-openproject/a4kSubtitles)
+
+## Alternative players
+
+### Flatpak SMPlayer
+
+```xml
+    <filename>flatpak-spawn</filename>
+    <args>--host /usr/bin/flatpak run --branch=stable --arch=x86_64 --command=smplayer --file-forwarding info.smplayer.SMPlayer "{1}"</args>
+```
