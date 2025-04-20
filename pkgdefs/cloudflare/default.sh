@@ -23,4 +23,6 @@ warp-cli tunnel ip add-range 10.0.0.0/8
 warp-cli registration new
 warp-cli connect
 
+source ./pkgdefs/cloudflare/polkit.sh
+
 sleep 3
