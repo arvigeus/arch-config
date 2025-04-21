@@ -17,8 +17,11 @@ sudo usermod -aG video "$USER"
 
 flatpak install -y flathub org.freedesktop.Platform.VulkanLayer.gamescope/x86_64/24.08
 
-mkdir -p "$HOME/.config/environment.d"
-cp -u -p ./pkgdefs/gamescope/env.conf "$HOME/.config/environment.d/gamescope.conf"
-systemctl --user daemon-reexec
+# For stubborn games: `SteamDeck=1 %command%`
+# Enabling it only fixes certain games, but it forces downloading lower resolution textures and etc
+# Bazzite has this on by default for all games on `-deck` images
+# mkdir -p "$HOME/.config/environment.d"
+# cp -u -p ./pkgdefs/gamescope/steamdeck.env.conf "$HOME/.config/environment.d/steamdeck.conf"
+# systemctl --user daemon-reexec
 
 source ./pkgdefs/gamescope/session/default.sh
