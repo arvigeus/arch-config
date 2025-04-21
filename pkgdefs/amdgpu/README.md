@@ -1,6 +1,17 @@
 # AMD GPU
 
-## Radeon
+## [Environment variables](https://docs.mesa3d.org/envvars.html)
+
+### DRI_PRIME
+
+Use a non-default GPU:
+
+```sh
+DRI_PRIME=N
+DRI_PRIME=N! # Forced
+```
+
+## Tips and Tricks
 
 List available cards:
 
