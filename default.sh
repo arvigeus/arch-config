@@ -39,6 +39,7 @@ source ./pkgdefs/kodi/default.sh
 source ./pkgdefs/yt-dlp/default.sh
 source ./pkgdefs/GIMP/default.sh
 source ./pkgdefs/fooyin/default.sh
+source ./pkgdefs/arr/default.sh
 
 source ./pkgdefs/delta/default.sh
 source ./pkgdefs/plasma/default.sh
