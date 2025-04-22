@@ -39,6 +39,8 @@ paru -S --noconfirm --needed plasma6-themes-vapor-steamos
 
 sudo pacman -S --needed --noconfirm steamtinkerlaunch
 
+sudo pacman -S --needed --noconfirm game-devices-udev
+
 source ./pkgdefs/steam/add-to-steam/default.sh
 
 create_steam_minimal_shortcut() {
