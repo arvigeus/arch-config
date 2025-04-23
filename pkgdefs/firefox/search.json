@@ -1,0 +1,178 @@
+{
+  "version": 12,
+  "engines": [
+    {
+      "id": "google",
+      "_name": "Google",
+      "_isAppProvided": true,
+      "_metaData": { "order": 1 }
+    },
+    {
+      "id": "ddg",
+      "_name": "DuckDuckGo",
+      "_isAppProvided": true,
+      "_metaData": { "order": 3 }
+    },
+    {
+      "id": "bing",
+      "_name": "Bing",
+      "_isAppProvided": true,
+      "_metaData": { "order": 2 }
+    },
+    {
+      "id": "wikipedia",
+      "_name": "Wikipedia (en)",
+      "_isAppProvided": true,
+      "_metaData": { "order": 4 }
+    },
+    {
+      "id": "1d8ddfc3-7641-4dba-a49d-e7e9fdd45010",
+      "_name": "Chaotic AUR",
+      "_loadPath": "[user]",
+      "_iconMapObj": {
+        "16": "https://aur.chaotic.cx/favicon-16x16.png"
+      },
+      "_metaData": { "order": 5 },
+      "_urls": [
+        {
+          "params": [],
+          "rels": [],
+          "template": "https://aur.chaotic.cx/packages?search={searchTerms}"
+        }
+      ],
+      "_orderHint": null,
+      "_telemetryId": null,
+      "_filePath": null,
+      "_definedAliases": ["chaotic"]
+    },
+    {
+      "id": "1c164dd0-6bb9-4b6f-92f5-e15f89867638",
+      "_name": "Arch Wiki",
+      "_loadPath": "[user]",
+      "_iconMapObj": {
+        "16": "https://archlinux.org/favicon.ico"
+      },
+      "_metaData": { "order": 6 },
+      "_urls": [
+        {
+          "params": [],
+          "rels": [],
+          "template": "https://wiki.archlinux.org/index.php?search={searchTerms}"
+        }
+      ],
+      "_orderHint": null,
+      "_telemetryId": null,
+      "_filePath": null,
+      "_definedAliases": ["@archwiki"]
+    },
+    {
+      "id": "ed982623-3299-4c5b-aebb-8473c7f4956a",
+      "_name": "Arch AUR",
+      "_loadPath": "[user]",
+      "_iconMapObj": {
+        "16": "https://archlinux.org/favicon.ico"
+      },
+      "_metaData": { "order": 7 },
+      "_urls": [
+        {
+          "params": [],
+          "rels": [],
+          "template": "https://aur.archlinux.org/packages?K={searchTerms}"
+        }
+      ],
+      "_orderHint": null,
+      "_telemetryId": null,
+      "_filePath": null,
+      "_definedAliases": ["@aur"]
+    },
+    {
+      "id": "bf5f75cc-ce4c-4a50-beb6-129ad78f4849",
+      "_name": "Arch",
+      "_loadPath": "[user]",
+      "_iconMapObj": {
+        "16": "https://archlinux.org/favicon.ico"
+      },
+      "_metaData": { "order": 8 },
+      "_urls": [
+        {
+          "params": [],
+          "rels": [],
+          "template": "https://archlinux.org/packages/?q={searchTerms}"
+        }
+      ],
+      "_orderHint": null,
+      "_telemetryId": null,
+      "_filePath": null,
+      "_definedAliases": ["@arch"]
+    },
+    {
+      "id": "5344f794-4d9c-4cf3-8be3-cbc5f12c56a6",
+      "_name": "Kagi",
+      "_loadPath": "[user]",
+      "_iconMapObj": {
+        "16": "https://www.kagi.com/favicon.ico"
+      },
+      "_metaData": { "order": 9 },
+      "_urls": [
+        {
+          "params": [],
+          "rels": [],
+          "template": "https://www.kagi.com/search?q={searchTerms}"
+        }
+      ],
+      "_orderHint": null,
+      "_telemetryId": null,
+      "_filePath": null,
+      "_definedAliases": ["kagi"]
+    },
+    {
+      "id": "e2a15b41-23d9-4e81-83a4-11208cdead61",
+      "_name": "Ecosia",
+      "_loadPath": "[user]",
+      "_iconMapObj": {
+        "16": "https://www.ecosia.org/static/icons/favicon.ico"
+      },
+      "_metaData": { "order": 10 },
+      "_urls": [
+        {
+          "params": [],
+          "rels": [],
+          "template": "https://www.ecosia.org/search?q={searchTerms}"
+        }
+      ],
+      "_orderHint": null,
+      "_telemetryId": null,
+      "_filePath": null,
+      "_definedAliases": ["ecosia"]
+    },
+    {
+      "id": "4c377dbe-250a-4096-b493-c109c0cd0fc7",
+      "_name": "SourceGraph",
+      "_loadPath": "[user]",
+      "_iconMapObj": {
+        "16": "https://sourcegraph.com/favicon.ico"
+      },
+      "_metaData": { "order": 11 },
+      "_urls": [
+        {
+          "params": [],
+          "rels": [],
+          "template": "https://sourcegraph.com/search?q=context:global+fork:no+{searchTerms}"
+        }
+      ],
+      "_orderHint": null,
+      "_telemetryId": null,
+      "_filePath": null,
+      "_definedAliases": ["code"]
+    }
+  ],
+  "metaData": {
+    "useSavedOrder": true,
+    "locale": "en-US",
+    "region": "VN",
+    "channel": "release",
+    "experiment": "",
+    "distroID": "archlinux",
+    "appDefaultEngineId": "google"
+  }
+}
