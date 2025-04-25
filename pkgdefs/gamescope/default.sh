@@ -16,6 +16,8 @@ sudo usermod -aG seat "$USER"
 sudo usermod -aG video "$USER"
 
 flatpak install -y flathub org.freedesktop.Platform.VulkanLayer.gamescope/x86_64/24.08
+flatpak install -y flathub org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/24.08
+
 
 # For stubborn games: `SteamDeck=1 %command%`
 # Enabling it only fixes certain games, but it forces downloading lower resolution textures and etc

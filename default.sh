@@ -27,6 +27,7 @@ source ./pkgdefs/gaming/default.sh
 source ./pkgdefs/proton/default.sh
 source ./pkgdefs/steam/default.sh
 source ./pkgdefs/gamescope/default.sh
+source ./pkgdefs/lutris/default.sh
 source ./pkgdefs/wine/default.sh
 source ./pkgdefs/emulation/default.sh
 

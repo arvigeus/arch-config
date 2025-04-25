@@ -16,6 +16,10 @@ install_browser_extensions() {
     # Multi-Account Containers (Firefox only)
     "https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/"
 
+    # Export Cookies
+    "https://addons.mozilla.org/en-US/firefox/addon/export-cookies-txt/"
+    "https://chromewebstore.google.com/detail/get-cookiestxt-locally/cclelndahbckbenkjhflpdbgdldlbecc"
+
     # Picture-in-Picture
     "https://chromewebstore.google.com/detail/picture-in-picture-extens/hkgfoiooedgoejojocmhlaklaeopbecg"
 
