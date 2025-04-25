@@ -1,5 +1,13 @@
 # Steam
 
+## MangoHud
+
+Enable MangoHud for flatpak Steam:
+
+```sh
+flatpak override --user --env=MANGOHUD=1 com.valvesoftware.Steam
+```
+
 ## Launch options
 
 Use this if you want Mangohud and Gamemode:
