@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Steam Big Picture
+Exec=/usr/bin/gamescope-session
+Categories=Network;FileTransfer;Game;
+Icon=steam
+Terminal=false
+MimeType=x-scheme-handler/steam;x-scheme-handler/steamlink;

@@ -67,6 +67,7 @@ EOF
 
 create_steam_minimal_shortcut "/usr/bin/steam" "" "Steam Minimal"
 create_steam_minimal_shortcut "/usr/bin/steam-native" "native" "Steam Minimal (Native)"
+cp -u -p ./pkgdefs/steam/steam_big_picture.desktop "$HOME/.local/share/applications/steam_big_picture.desktop"
 
 # https://wiki.archlinux.org/title/Improving_performance
 echo "vm.max_map_count = 2147483642" | sudo tee /etc/sysctl.d/80-gamecompatibility.conf
