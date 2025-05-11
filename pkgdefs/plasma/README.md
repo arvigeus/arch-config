@@ -17,6 +17,10 @@ Wetter:
 
 - [Plasma Widget tutorial](https://github.com/shvedes/awesome-kde)
 
+## Tips and Tricks
+
+- KCOmmandBar: `Ctrl+Alt+i` (Command Palette)
+
 ## Related
 
 - [Awesome KDE](https://github.com/shvedes/awesome-kde)
