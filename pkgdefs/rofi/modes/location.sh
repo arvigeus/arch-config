@@ -10,7 +10,7 @@ MENU_ITEMS=(
 
 # Function to set up Vietnam environment
 set_vietnam() {
-    sudo reflector --country Vietnam --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
+    sudo reflector
 
     sudo ln -sf /usr/share/zoneinfo/Asia/Ho_Chi_Minh /etc/localtime
     sudo hwclock --systohc
@@ -27,7 +27,7 @@ set_vietnam() {
 
 # Function to set up Bulgaria environment
 set_bulgaria() {
-    sudo reflector --country Bulgaria --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
+    sudo reflector
 
     sudo ln -sf /usr/share/zoneinfo/Europe/Sofia /etc/localtime
     sudo hwclock --systohc

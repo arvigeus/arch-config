@@ -1,0 +1,9 @@
+[Trigger]
+Operation = Upgrade
+Type = Package
+Target = *
+
+[Action]
+Description = Applying firmware updates via fwupd...
+When = PostTransaction
+Exec = /bin/sh -c "/usr/bin/fwupdmgr refresh && /usr/bin/fwupdmgr update --no-reboot-check"
