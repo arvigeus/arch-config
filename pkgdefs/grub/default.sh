@@ -5,7 +5,8 @@
 #   - GRUB_CMDLINE_LINUX: change `cryptdevice=UUID=<uuid>:<name>` to `rd.luks.name=<uuid>=<name>` (replaced `cryptdevice=UUID` with `rd.luks.name` and `:<name>` with `=<name>`)
 #   - GRUB_CMDLINE_LINUX_DEFAULT: add `splash`
 
-# NOTE: Setting GRUB_TIMEOUT to 0 disables pressing Shift to show the menu. 
+sudo sed -i 's|^GRUB_DEFAULT=.*|GRUB_DEFAULT="Advanced options for Arch Linux>Arch Linux, with Linux linux-bazzite"|' /etc/default/grub
+# NOTE: Setting GRUB_TIMEOUT to 0 disables pressing Shift to show the menu.
 sudo sed -i 's/^GRUB_TIMEOUT=.*/GRUB_TIMEOUT=1/' /etc/default/grub
 sudo sed -i 's/^GRUB_TIMEOUT_STYLE=.*/GRUB_TIMEOUT_STYLE=hidden/' /etc/default/grub
 sudo sed -i 's|^GRUB_CMDLINE_LINUX_DEFAULT=.*|GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet splash mitigations=off"|' /etc/default/grub
