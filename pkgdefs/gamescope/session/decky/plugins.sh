@@ -106,3 +106,4 @@ fetch_store_data
 install_plugin "HLTB for Deck" "hulkrelax/hltb-for-deck" "hltb-for-deck"
 install_plugin "ProtonDB Badges" "OMGDuke/protondb-decky" "protondb-decky"
 install_plugin "Decky-Framegen" "xXJSONDeruloXx/Decky-Framegen" "Decky-Framegen"
+install_plugin "SteamGridDB" "SteamGridDB/decky-steamgriddb" "SteamGridDB"
