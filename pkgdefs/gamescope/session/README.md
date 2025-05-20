@@ -2,7 +2,12 @@
 
 ## Decky
 
-- [Decky Framegen](https://github.com/xXJSONDeruloXx/Decky-Framegen) - if not available in plugin store, download zip from releases, enable dev mode in Decky, install from plugin zip; game has to be set to DLSS; some games support nativly framegen, other don't; activate hidden overlay with Insert key (Steam btn + trackpad moves mouse); switch to FSR3; there's some option to fix HUD in broken games
+- [Decky Framegen](https://github.com/xXJSONDeruloXx/Decky-Framegen)
+  - game has to be set to DLSS
+  - some games support nativly framegen, other don't
+  - activate hidden overlay with Insert key (Steam btn + trackpad moves mouse)
+  - switch to FSR3
+  - there's some option to fix HUD in broken games
 
 ## Mangohud
 
