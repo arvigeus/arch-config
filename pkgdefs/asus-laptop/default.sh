@@ -10,6 +10,12 @@ if ! grep -q "\[g14\]" /etc/pacman.conf; then
     sudo pacman -Suy --noconfirm
 fi
 
+# Provides Armory Crate
+sudo pacman -S --needed --noconfirm linux-g14 linux-g14-headers
+# Provides much better support in general
+sudo pacman -S --needed --noconfirm linux-bazzite-bin
+
+
 sudo pacman -S --needed --noconfirm asusctl rog-control-center power-profiles-daemon supergfxctl switcheroo-control
 sudo systemctl enable --now power-profiles-daemon.service
 sudo systemctl enable --now supergfxd
