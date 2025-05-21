@@ -10,7 +10,15 @@ ulimit -n 524288 || echo "Failed to set ulimit"
 
 sudo systemctl start plugin_loader.service
 
-asusctl profile -P Performance
+
+
+# Check AMD_BOOST env var
+if [ "${AMD_BOOST:-0}" != "1" ]; then
+  amd-boost 0
+else
+  # Cannot set Performance and disable boost at the same time
+  asusctl profile -P Performance
+fi
 
 # Generally this doesn't work: neither Geamescope session, neither Steam Big Picture
 #sudo ryzenadj --tctl-temp=80

@@ -28,7 +28,6 @@ fi
 mkdir -p "$HOME/.config/rog/"
 cp -u -p ./pkgdefs/asus-laptop/config/rog-control-center.cfg "$HOME/.config/rog/rog-control-center.cfg"
 
-
 sudo pacman -S --needed --noconfirm lact
 sudo systemctl enable --now lactd
 
@@ -38,6 +37,9 @@ sudo pacman -S --needed --noconfirm ryzenadj ryzen_smu-dkms-git
 echo "ryzen_smu" | sudo tee /etc/modules-load.d/ryzen_smu.conf
 # Needs restart
 # Test: sudo ryzenadj --info
+
+sudo pacman -S --needed --noconfirm cpupower
+sudo cp -u -p ./pkgdefs/asus-laptop/amd-boost.sh /usr/local/bin/amd-boost
 
 mkdir -p "$HOME/.local/bin/"
 cp -u -p ./pkgdefs/asus-laptop/performance_profile.sh "$HOME/.local/bin/performance_profile"
