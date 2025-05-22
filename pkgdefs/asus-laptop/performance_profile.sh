@@ -2,6 +2,7 @@
 
 profile_powersave() {
     asusctl profile -P Quiet  &> /dev/null
+    amd-boost 0
     sudo ryzenadj --power-saving  &> /dev/null
     powertop --auto-tune &> /dev/null
 
@@ -17,6 +18,7 @@ profile_powersave() {
 
 profile_balanced() {
     asusctl profile -P Balanced  &> /dev/null
+    amd-boost 1
     
     if kscreen-doctor -o | grep -A3 "eDP-2" | grep -q "enabled"; then
         kscreen-doctor output.eDP-2.mode.2560x1600@120 &> /dev/null
