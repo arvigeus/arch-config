@@ -7,4 +7,4 @@ Target = pacman-mirrorlist
 Description = Updating pacman-mirrorlist using reflector
 When = PostTransaction
 Depends = reflector
-Exec = /bin/sh -c 'mapfile -t args < <(grep -vE "^\s*#|^\s*$" /etc/xdg/reflector/reflector.conf | xargs -n1) && reflector "${args[@]}" && rm -f /etc/pacman.d/mirrorlist.pacnew'
+Exec = /bin/sh -c 'mapfile -t args < <(grep -vE "^\s*#|^\s*$" /etc/xdg/reflector/reflector.conf | xargs -n1) && reflector "${args[@]}" && rm -f /etc/pacman.d/mirrorlist.pacnew && pacman -Syy'
