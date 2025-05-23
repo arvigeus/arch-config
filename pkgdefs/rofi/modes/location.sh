@@ -10,7 +10,8 @@ MENU_ITEMS=(
 
 # Function to set up Vietnam environment
 set_vietnam() {
-    sudo reflector
+    mapfile -t args < <(grep -vE '^\s*#|^\s*$' /etc/xdg/reflector/reflector.conf | xargs -n1) && sudo reflector "${args[@]}"
+
 
     sudo ln -sf /usr/share/zoneinfo/Asia/Ho_Chi_Minh /etc/localtime
     sudo hwclock --systohc
@@ -29,7 +30,8 @@ set_vietnam() {
 
 # Function to set up Bulgaria environment
 set_bulgaria() {
-    sudo reflector
+    mapfile -t args < <(grep -vE '^\s*#|^\s*$' /etc/xdg/reflector/reflector.conf | xargs -n1) && sudo reflector "${args[@]}"
+
 
     sudo ln -sf /usr/share/zoneinfo/Europe/Sofia /etc/localtime
     sudo hwclock --systohc
