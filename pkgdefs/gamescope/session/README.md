@@ -9,6 +9,10 @@
   - switch to FSR3
   - there's some option to fix HUD in broken games
 
+### Themes
+
+[Decky Themes](https://deckthemes.com/) (requires CSS Loader)
+
 ## Mangohud
 
 To enable mangohud with gamescope you need to install mangoapp. `gamescope --mangoapp %command%`

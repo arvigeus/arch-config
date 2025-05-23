@@ -22,6 +22,7 @@ fi
 #sudo ryzenadj --tctl-temp=80
 
 # Disable internal speakers
+default_sink=$(pactl get-default-sink)
 pactl set-card-profile alsa_card.pci-0000_07_00.6 off
 
 switcherooctl launch gamescope \
@@ -31,3 +32,7 @@ switcherooctl launch gamescope \
   -- steam-native -steamos3 -steampal -steamdeck -gamepadui -pipewire-dmabuf
   # -O 'DP-3,DP-1,HDMI-A-1,*,eDP-1' -r 75
   # --generate-drm-mode --hdr-enabled --hdr-itm-enable
+
+# Re-enable internal speakers
+pactl set-card-profile alsa_card.pci-0000_07_00.6 output:analog-stereo
+[ -n "$default_sink" ] && pactl set-default-sink "$default_sink"
