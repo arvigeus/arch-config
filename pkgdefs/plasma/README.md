@@ -25,3 +25,4 @@ Wetter:
 
 - [Awesome KDE](https://github.com/shvedes/awesome-kde)
 - [kde-configuration-files](https://github.com/shalva97/kde-configuration-files)
+- [Appium automation testing](https://develop.kde.org/docs/apps/tests/appium/)
