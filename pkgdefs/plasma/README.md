@@ -24,3 +24,4 @@ Wetter:
 ## Related
 
 - [Awesome KDE](https://github.com/shvedes/awesome-kde)
+- [kde-configuration-files](https://github.com/shalva97/kde-configuration-files)

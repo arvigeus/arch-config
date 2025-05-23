@@ -33,10 +33,11 @@
 
 /*****----- Configuration -----*****/
 configuration {
-    modi:                       "commands:~/.config/rofi/modes/commands.sh,g14:~/.config/rofi/modes/g14.sh,systemd:~/.config/rofi/modes/systemd.sh,drun,filebrowser,location:~/.config/rofi/modes/location.sh";
+    modi:                       "commands:~/.config/rofi/modes/commands.sh,g14:~/.config/rofi/modes/g14.sh,boot:~/.config/rofi/modes/boot.sh,systemd:~/.config/rofi/modes/systemd.sh,drun,filebrowser,location:~/.config/rofi/modes/location.sh";
     show-icons:                 true;
     display-commands:           " Commands";
     display-g14:                " G14";
+    display-boot:               " Boot Times";
     display-systemd:            " Systemd";
     display-drun:               " Apps";
     display-filebrowser:        " Files";
