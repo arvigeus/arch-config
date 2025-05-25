@@ -19,6 +19,7 @@ source ./pkgdefs/mkinitcpio/default.sh
 source ./pkgdefs/ssd/default.sh
 source ./pkgdefs/logitech/default.sh
 
+source ./pkgdefs/grub/default.sh
 source ./pkgdefs/plymouth/default.sh
 
 #source ./pkgdefs/snappier/default.sh
@@ -30,6 +31,7 @@ source ./pkgdefs/gamescope/default.sh
 source ./pkgdefs/lutris/default.sh
 source ./pkgdefs/wine/default.sh
 source ./pkgdefs/emulation/default.sh
+source ./pkgdefs/roblox/default.sh
 
 source ./pkgdefs/brew/default.sh
 
@@ -70,6 +72,7 @@ source ./pkgdefs/fonts/default.sh
 source ./pkgdefs/make/default.sh
 source ./pkgdefs/nodejs/default.sh
 source ./pkgdefs/deno/default.sh
+source ./pkgdefs/rust/default.sh
 source ./pkgdefs/sqlite/default.sh
 
 source ./pkgdefs/bash/default.sh
