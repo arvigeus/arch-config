@@ -12,4 +12,7 @@ sh:
 	@find ./pkgdefs/ ./utils/ \( -name "*.sh" -o -name "*.desktop" \) -type f -exec chmod +x {} \;
 	@find ./pkgdefs/ -type f -exec touch {} \;
 
+check:
+	@./scripts/check_imports.sh;
+
 .PHONY: default pkg sh
