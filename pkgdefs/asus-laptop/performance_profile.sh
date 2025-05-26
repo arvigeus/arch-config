@@ -30,7 +30,9 @@ profile_balanced() {
     fi
 }
 
-# Main function to handle arguments
+# Ensure other power profile managers are not conflicting
+sleep 5
+
 case "$1" in
     powersave) profile_powersave ;;
     balanced) profile_balanced ;;
