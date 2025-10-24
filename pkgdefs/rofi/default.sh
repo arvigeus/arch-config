@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo pacman -S --needed --noconfirm rofi-wayland
+sudo pacman -S --needed --noconfirm rofi
 
 mkdir -p "$HOME/.config/rofi/modes"
 cp -u -p ./pkgdefs/rofi/config.rasi "$HOME/.config/rofi/config.rasi"

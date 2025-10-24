@@ -75,6 +75,7 @@ source ./pkgdefs/nodejs/default.sh
 source ./pkgdefs/deno/default.sh
 source ./pkgdefs/rust/default.sh
 source ./pkgdefs/sqlite/default.sh
+source ./pkgdefs/dev/default.sh
 
 source ./pkgdefs/bash/default.sh
 source ./pkgdefs/rofi/default.sh

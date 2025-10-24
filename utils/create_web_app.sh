@@ -58,7 +58,9 @@ build_exec_string() {
     # Handle browser-specific configuration
     if [[ "$browser" =~ chrome|chromium|brave|edge|vivaldi ]]; then
         # Chromium-based browsers
-        echo "$browser --app=\"$url\" --class=WebApp-$codename --user-data-dir=\"$profile_path\""
+        # Use both --class and --name as per webapp-manager
+		# BUG: https://github.com/linuxmint/webapp-manager/issues/358
+        echo "$browser --app=\"$url\" --class=WebApp-$codename --name=WebApp-$codename --user-data-dir=\"$profile_path\""
     elif [[ "$browser" =~ firefox|librewolf|waterfox ]]; then
         # Firefox-based browsers
         mkdir -p "$profile_path/chrome"

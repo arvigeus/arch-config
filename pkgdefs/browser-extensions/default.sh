@@ -53,8 +53,9 @@ install_browser_extensions() {
     "https://chromewebstore.google.com/detail/webhint/gccemnpihkbgkdmoogenkbkckppadcag"
 
     # Enhancer for Youtube
-    "https://addons.mozilla.org/firefox/downloads/file/4393561/enhancer_for_youtube-latest.xpi"
-    "https://chromewebstore.google.com/detail/enhancer-for-youtube/ponfpcnoihfmfllpaingbgckeeldkhle"
+	# Doesn't work for Firefox anymore, use system volume boost
+    # "https://addons.mozilla.org/firefox/downloads/file/4393561/enhancer_for_youtube-latest.xpi"
+    # "https://chromewebstore.google.com/detail/enhancer-for-youtube/ponfpcnoihfmfllpaingbgckeeldkhle"
 
     # SponsorBlock
     "https://addons.mozilla.org/firefox/downloads/file/4480833/sponsorblock-latest.xpi"

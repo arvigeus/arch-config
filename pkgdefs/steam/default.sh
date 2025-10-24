@@ -32,7 +32,11 @@ sudo pacman -S --needed --noconfirm \
     gtk3 lib32-gtk3 \
     gst-plugins-base-libs lib32-gst-plugins-base-libs \
     glfw \
-    opencl-icd-loader lib32-opencl-icd-loader
+    opencl-icd-loader lib32-opencl-icd-loader \
+	alsa-plugins lib32-alsa-plugins \
+	libva lib32-libva \
+	openal lib32-openal \
+	libjpeg-turbo lib32-libjpeg-turbo
 
 # Vapor theme
 paru -S --noconfirm --needed plasma6-themes-vapor-steamos

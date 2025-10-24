@@ -4,6 +4,8 @@ source ./utils/file.sh
 
 sudo pacman -S --needed --noconfirm chromium
 
+flatpak install -y flathub com.google.Chrome
+
 source ./pkgdefs/browser-extensions/default.sh
 install_browser_extensions "chromium"
 
