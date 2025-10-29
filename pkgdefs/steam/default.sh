@@ -4,8 +4,7 @@ source ./utils/file.sh
 
 # https://wiki.archlinux.org/title/Steam
 # https://wiki.archlinux.org/title/Gaming
-sudo pacman -S --needed --noconfirm \
-    steam steam-native-runtime
+sudo pacman -S --needed --noconfirm steam
 
 flatpak install -y flathub org.freedesktop.Platform.VulkanLayer.gamescope/x86_64/24.08
 
@@ -13,7 +12,6 @@ flatpak install -y flathub org.freedesktop.Platform.VulkanLayer.gamescope/x86_64
 # - https://github.com/CachyOS/CachyOS-PKGBUILDS/blob/master/cachyos-gaming-meta/PKGBUILD
 # - https://github.com/xerolinux/xlapit-cli/blob/main/xero-scripts/scripts/gaming.sh
 # - (minus) https://archlinux.org/packages/multilib/x86_64/steam/
-# - (minus) https://archlinux.org/packages/multilib/x86_64/steam-native-runtime/
 # https://wiki.archlinux.org/title/Steam/Troubleshooting
 # https://wiki.archlinux.org/title/Steam/Game-specific_troubleshooting
 sudo pacman -S --needed --noconfirm \
@@ -70,7 +68,6 @@ EOF
 }
 
 create_steam_minimal_shortcut "/usr/bin/steam" "" "Steam Minimal"
-create_steam_minimal_shortcut "/usr/bin/steam-native" "native" "Steam Minimal (Native)"
 cp -u -p ./pkgdefs/steam/steam_big_picture.desktop "$HOME/.local/share/applications/steam_big_picture.desktop"
 
 # https://wiki.archlinux.org/title/Steam#Faster_shader_pre-compilation

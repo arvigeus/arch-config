@@ -29,7 +29,7 @@ switcherooctl launch gamescope \
   --adaptive-sync \
   -e --xwayland-count 2 --default-touch-mode 4 --immediate-flips -F fsr --mangoapp \
   -f --force-grab-cursor \
-  -- steam-native -steamos3 -steampal -steamdeck -gamepadui -pipewire-dmabuf
+  -- steam -steamos3 -steampal -steamdeck -gamepadui -pipewire-dmabuf
   # -O 'DP-3,DP-1,HDMI-A-1,*,eDP-1' -r 75
   # --generate-drm-mode --hdr-enabled --hdr-itm-enable
 

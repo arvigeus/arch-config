@@ -84,7 +84,7 @@ Filters can be changed while the game is running:
 2. Create `~/.config/environment.d/gamescope-session-plus.conf`:
 
    ```conf
-   CLIENTCMD="steam-native -gamepadui -steamos3 -steampal -steamdeck -pipewire-dmabuf"
+   CLIENTCMD="steam -gamepadui -steamos3 -steampal -steamdeck -pipewire-dmabuf"
    GAMESCOPECMD="switcherooctl launch gamescope -e -f"
    ```
 
