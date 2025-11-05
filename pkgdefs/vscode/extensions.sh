@@ -12,9 +12,9 @@ code --install-extension yoavbls.pretty-ts-errors
 code --install-extension wix.vscode-import-cost
 code --install-extension gruntfuggly.todo-tree
 
-# UX Improvements
-## WindSurf
-code --install-extension Codeium.codeium
+# AI
+code --install-extension RooVeterinaryInc.roo-cline
+code --install-extension Anthropic.claude-code
 
 # Color schemes
 ## "workbench.colorTheme": "One Dark Pro Mix"
@@ -39,6 +39,10 @@ code --install-extension graphql.vscode-graphql
 # Bash
 code --install-extension mads-hartmann.bash-ide-vscode
 code --install-extension mkhl.shfmt
+
+# Rust
+code --install-extension rust-lang.rust-analyzer
+code --install-extension wcrichton.flowistry
 
 # C++
 # code --install-extension llvm-vs-code-extensions.vscode-clangd

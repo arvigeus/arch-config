@@ -24,12 +24,14 @@
   "auto_install_extensions": {
     "html": true,
     "basher": true,
+    "biome": true,
     "stylelint": true,
     "deno": true,
     "csharp": true,
     "graphql": true,
     "toml": true,
     "env": true,
+    "git-firefly": true,
     "one-dark-pro": true
   }
 }
