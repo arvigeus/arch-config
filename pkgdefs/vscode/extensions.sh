@@ -43,6 +43,7 @@ code --install-extension mkhl.shfmt
 # Rust
 code --install-extension rust-lang.rust-analyzer
 code --install-extension vadimcn.vscode-lldb
+code --install-extension tamasfe.even-better-toml
 code --install-extension wcrichton.flowistry
 
 # C++
