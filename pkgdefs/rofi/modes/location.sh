@@ -59,9 +59,9 @@ set_bulgaria() {
 
     # Update KDE weather widget to show Bulgaria location
     for config in "$HOME/.config/plasma-org.kde.plasma.desktop-appletsrc" "$HOME/.config/plasmashellrc"; do
-        sed -i '/^source=/c\source=wettercom|weather|Yantra, Oblast Gabrovo, BG|BG0725565;Yantra' "$config"
-        sed -i '/^placeDisplayName=/c\placeDisplayName=Yantra, Oblast Gabrovo, BG' "$config"
-        sed -i '/^placeInfo=/c\placeInfo=place|Yantra, Oblast Gabrovo, BG|extra|BG0725565;Yantra' "$config"
+        sed -i '/^source=/c\source=wettercom|weather|Yantra, Oblast Veliko Tarnovo, BG|BG0725564;Yantra' "$config"
+        sed -i '/^placeDisplayName=/c\placeDisplayName=Yantra, Oblast Veliko Tarnovo, BG' "$config"
+        sed -i '/^placeInfo=/c\placeInfo=place|Yantra, Oblast Veliko Tarnovo, BG|extra|BG0725564;Yantra' "$config"
     done
 
     # Restart plasmashell to apply weather widget changes
