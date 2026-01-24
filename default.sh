@@ -58,6 +58,7 @@ source ./pkgdefs/vscode/default.sh
 source ./pkgdefs/meld/default.sh
 source ./pkgdefs/micro/default.sh
 source ./pkgdefs/neovim/default.sh
+source ./pkgdefs/fresh/default.sh
 
 source ./pkgdefs/zen/default.sh
 source ./pkgdefs/firefox/default.sh
