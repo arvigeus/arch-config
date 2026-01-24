@@ -6,8 +6,9 @@ source ./utils/file.sh
 sudo pacman -S --needed --noconfirm \
     gamescope \
     mangohud lib32-mangohud \
-    goverlay \
     seatd
+
+flatpak install -y flathub io.github.benjamimgois.goverlay
 
 paru -S --noconfirm --needed scopebuddy
 

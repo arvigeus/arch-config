@@ -41,6 +41,7 @@ source ./pkgdefs/vlc/default.sh
 source ./pkgdefs/kodi/default.sh
 source ./pkgdefs/yt-dlp/default.sh
 source ./pkgdefs/GIMP/default.sh
+source ./pkgdefs/photopea/default.sh
 source ./pkgdefs/fooyin/default.sh
 source ./pkgdefs/syncplay/default.sh
 source ./pkgdefs/arr/default.sh
@@ -62,6 +63,7 @@ source ./pkgdefs/zen/default.sh
 source ./pkgdefs/firefox/default.sh
 source ./pkgdefs/chromium/default.sh
 source ./pkgdefs/tor/default.sh
+source ./pkgdefs/yaak/default.sh
 
 source ./pkgdefs/qBittorrent/default.sh
 source ./pkgdefs/productivity/default.sh

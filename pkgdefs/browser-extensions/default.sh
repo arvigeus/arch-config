@@ -52,6 +52,9 @@ install_browser_extensions() {
     "https://addons.mozilla.org/firefox/downloads/file/4344764/webhint-latest.xpi"
     "https://chromewebstore.google.com/detail/webhint/gccemnpihkbgkdmoogenkbkckppadcag"
 
+	# Claude
+	# "https://chromewebstore.google.com/detail/claude/fcoeoabgfenejglbffodgkkbkcdhcgfn"
+
     # Enhancer for Youtube
 	# Doesn't work for Firefox anymore, use system volume boost
     # "https://addons.mozilla.org/firefox/downloads/file/4393561/enhancer_for_youtube-latest.xpi"
