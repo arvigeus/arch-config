@@ -12,8 +12,6 @@ fi
 
 # Provides Armory Crate
 sudo pacman -S --needed --noconfirm linux-g14 linux-g14-headers
-# Provides much better support in general
-sudo pacman -S --needed --noconfirm linux-bazzite-bin
 
 
 sudo pacman -S --needed --noconfirm asusctl rog-control-center power-profiles-daemon supergfxctl switcheroo-control

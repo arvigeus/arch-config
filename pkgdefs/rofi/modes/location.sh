@@ -42,9 +42,8 @@ set_vietnam() {
     # Restart plasmashell to apply weather widget changes
     (sleep 1 && kquitapp6 plasmashell && sleep 2 && plasmashell --replace &) >/dev/null 2>&1
 
-    # Update pacman mirror list and sync package databases
-    mapfile -t args < <(grep -vE '^\s*#|^\s*$' /etc/xdg/reflector/reflector.conf | xargs -n1) && sudo reflector "${args[@]}"
-	sudo pacman -Syy
+    # Update pacman mirror list
+    sudo systemctl start reflector.service
 
     notify-send -a "Location" "Xin chào Việt Nam!" --icon="$HOME/.icons/flags/flag-vn.png"
 }
@@ -67,9 +66,8 @@ set_bulgaria() {
     # Restart plasmashell to apply weather widget changes
     (sleep 1 && kquitapp6 plasmashell && sleep 2 && plasmashell --replace &) >/dev/null 2>&1
 
-    # Update pacman mirror list and sync package databases
-    mapfile -t args < <(grep -vE '^\s*#|^\s*$' /etc/xdg/reflector/reflector.conf | xargs -n1) && sudo reflector "${args[@]}"
-    sudo pacman -Syy
+    # Update pacman mirror list
+    sudo systemctl start reflector.service
 
     notify-send -a "Location" "Добре дошъл у дома!" --icon="$HOME/.icons/flags/flag-bg.png"
 }
