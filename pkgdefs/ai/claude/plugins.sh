@@ -3,7 +3,13 @@
 # claude plugin marketplace add <org>/<marketplace-name>
 # claude plugin install <plugin-name>@<marketplace-name>
 
+# Fix for cross-filesystem plugin installation (EXDEV error)
+# When /tmp is on tmpfs and ~/.claude is on a different filesystem
+export TMPDIR="${HOME}/.cache/tmp"
+mkdir -p "$TMPDIR"
+
 claude plugin marketplace add anthropics/claude-plugins-official
+claude plugin marketplace add vercel-labs/agent-browser
 claude plugin marketplace add katawaredev/kataware-claude-plugins
 
 claude plugin install typescript-lsp@claude-plugins-official
@@ -86,3 +92,9 @@ claude plugin install superpowers@claude-plugins-official
 #   /superpowers:write-plan - Create detailed implementation plan.
 #   /superpowers:execute-plan - Execute plan in batches.
 # Features: Enforces TDD, systematic debugging, and sub-agent driven development.
+
+claude plugin install agent-browser@agent-browser
+# Headless browser automation for AI agents.
+# Provides: Browser interaction, form filling, screenshots, data extraction, web testing.
+# Requirement: Node.js and Playwright dependencies (installed via npm postinstall).
+# Note: Uses TMPDIR workaround for cross-filesystem installations.
