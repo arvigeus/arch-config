@@ -2,6 +2,7 @@
 
 - [Diablo Web](https://d07riv.github.io/diabloweb/) [[GitHub](https://github.com/d07RiV/diabloweb)] - Diablo 1
 - NetHack
+  - [NetHack 3D](https://jamesiv4.github.io/nethack-3d/) [[GitHub](https://github.com/JamesIV4/nethack-3d)] - v3.6.7
   - [NetHack Web](https://sakkaku-dev.github.io/nethack-web/) [[GitHub](https://github.com/sakkaku-dev/nethack-web)] - v3.6.7
   - [BrowserHack](https://wang-lu.com/BrowserHack/) [[GitHub](https://github.com/coolwanglu/BrowserHack)] - v3.4.3
   - [Public NetHack server at www.alt.org](https://www.alt.org/nethack/hterm/)
