@@ -24,6 +24,7 @@
   "auto_install_extensions": {
     "html": true,
     "basher": true,
+    "dockerfile": true,
     "biome": true,
     "stylelint": true,
     "deno": true,
@@ -35,5 +36,8 @@
     "env": true,
     "git-firefly": true,
     "one-dark-pro": true
+  },
+  "file_types": {
+    "Dockerfile": ["Dockerfile.*", "Containerfile.*"]
   }
 }

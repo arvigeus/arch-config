@@ -20,6 +20,9 @@ code --install-extension Anthropic.claude-code
 ## "workbench.colorTheme": "One Dark Pro Mix"
 code --install-extension zhuangtongfa.material-theme
 
+# Docker (Podman)
+code --install-extension docker.docker
+
 # Web Dev
 code --install-extension dbaeumer.vscode-eslint
 code --install-extension esbenp.prettier-vscode
