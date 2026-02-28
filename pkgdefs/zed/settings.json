@@ -27,6 +27,7 @@
     "biome": true,
     "stylelint": true,
     "deno": true,
+    "just": true,
     "crates-lsp": true,
     "csharp": true,
     "graphql": true,

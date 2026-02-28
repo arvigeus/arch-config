@@ -43,8 +43,13 @@ code --install-extension mkhl.shfmt
 # Rust
 code --install-extension rust-lang.rust-analyzer
 code --install-extension vadimcn.vscode-lldb
-code --install-extension tamasfe.even-better-toml
 code --install-extension wcrichton.flowistry
+
+# TOML
+code --install-extension tamasfe.even-better-toml
+
+# Just
+code --install-extension nefrob.vscode-just-syntax
 
 # C++
 # code --install-extension llvm-vs-code-extensions.vscode-clangd
