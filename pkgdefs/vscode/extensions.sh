@@ -24,6 +24,7 @@ code --install-extension zhuangtongfa.material-theme
 code --install-extension docker.docker
 
 # Web Dev
+code --install-extension biomejs.biome
 code --install-extension dbaeumer.vscode-eslint
 code --install-extension esbenp.prettier-vscode
 code --install-extension csstools.postcss
