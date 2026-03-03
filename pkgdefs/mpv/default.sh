@@ -1,8 +1,7 @@
 #!/bin/bash
 
 # https://wiki.archlinux.org/title/Mpv
-sudo pacman -S --needed --noconfirm mpv mpv-shim-default-shaders
-paru -S --noconfirm --needed mpv-uosc-git mpv-thumbfast-git
+sudo pacman -S --needed --noconfirm mpv mpv-shim-default-shaders chaotic-aur/mpv-uosc-git chaotic-aur/mpv-thumbfast-git
 
 mkdir -p "$HOME/.config/mpv"
 ln -s /usr/share/mpv-shim-default-shaders/shaders/ "$HOME/.config/mpv"
