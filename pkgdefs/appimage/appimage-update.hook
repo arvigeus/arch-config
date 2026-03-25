@@ -1,0 +1,9 @@
+[Trigger]
+Operation = Upgrade
+Type = Package
+Target = *
+
+[Action]
+Description = Updating AppImages via GearLever...
+When = PostTransaction
+Exec = /bin/sh -c 'flatpak run it.mijorus.gearlever --update --all --yes'
