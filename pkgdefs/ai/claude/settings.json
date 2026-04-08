@@ -1,5 +1,31 @@
 {
   "permissions": {
+    "allow": [
+      "WebFetch",
+      "WebSearch",
+      "Bash(ls:*)",
+      "Bash(cat:*)",
+      "Bash(head:*)",
+      "Bash(tail:*)",
+      "Bash(find:*)",
+      "Bash(grep:*)",
+      "Bash(rg:*)",
+      "Bash(wc:*)",
+      "Bash(file:*)",
+      "Bash(stat:*)",
+      "Bash(tree:*)",
+      "Bash(pwd:*)",
+      "Bash(which:*)",
+      "Bash(where:*)",
+      "Bash(type:*)",
+      "Bash(dir:*)",
+      "Bash(git log:*)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git show:*)",
+      "Bash(git branch:*)",
+      "Bash(git blame:*)"
+    ],
     "deny": [
       "Read(./.env)",
       "Read(./.env.*)",
@@ -8,5 +34,48 @@
       "Read(./build)"
     ]
   },
-  "includeCoAuthoredBy": false
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": ".claude/hooks/detect-package-manager.sh"
+          }
+        ]
+      }
+    ]
+  },
+  "spinnerVerbs": {
+    "mode": "append",
+    "verbs": [
+      "I'm Feeling Lucky",
+      "Brewing fresh bytes",
+      "Converting coffee into code",
+      "Looking for a misplaced semicolon",
+      "Greasin' the cogs of the machine",
+      "Calibrating the flux capacitor",
+      "Don't panic!",
+      "Following the white rabbit",
+      "Blowing on the cartridge",
+      "Loading… Do a barrel roll!",
+      "What could possibly go wrong?",
+      "Applying percussive maintenance",
+      "Rewriting in Rust for no particular reason",
+      "That's not a bug, it's an undocumented feature",
+      "I've seen things you people wouldn't believe…",
+      "Dividing by zero… just kidding!",
+      "Making it go beep boop.",
+      "Just waiting for the dial-up tone to finish",
+      "Pretty sure there's a cat walking on the keyboard somewhere",
+      "Enhancing… Enhancing… Still loading.",
+      "It's not a bug, it's a feature…",
+      "Have you tried turning it off and on again?"
+    ]
+  }
 }
