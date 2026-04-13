@@ -4,3 +4,6 @@ flatpak install -y flathub com.rtosta.zapzap
 #flatpak install -y flathub com.ktechpit.whatsie
 #flatpak install -y flathub org.telegram.desktop
 #flatpak install -y flathub com.discordapp.Discord
+
+# ~/.config/discord/settings.json
+# "SKIP_HOST_UPDATE": true
