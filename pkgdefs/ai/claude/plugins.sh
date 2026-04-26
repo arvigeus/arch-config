@@ -9,8 +9,13 @@ export TMPDIR="${HOME}/.cache/tmp"
 mkdir -p "$TMPDIR"
 
 claude plugin marketplace add anthropics/claude-plugins-official
+jq '."claude-plugins-official".autoUpdate = true' "${HOME}/.claude/plugins/known_marketplaces.json" > "${HOME}/.claude/plugins/known_marketplaces.json.tmp" && mv "${HOME}/.claude/plugins/known_marketplaces.json.tmp" "${HOME}/.claude/plugins/known_marketplaces.json"
+
 claude plugin marketplace add vercel-labs/agent-browser
+jq '."agent-browser".autoUpdate = true' "${HOME}/.claude/plugins/known_marketplaces.json" > "${HOME}/.claude/plugins/known_marketplaces.json.tmp" && mv "${HOME}/.claude/plugins/known_marketplaces.json.tmp" "${HOME}/.claude/plugins/known_marketplaces.json"
+
 claude plugin marketplace add katawaredev/kataware-claude-plugins
+jq '."kataware-claude-plugins".autoUpdate = true' "${HOME}/.claude/plugins/known_marketplaces.json" > "${HOME}/.claude/plugins/known_marketplaces.json.tmp" && mv "${HOME}/.claude/plugins/known_marketplaces.json.tmp" "${HOME}/.claude/plugins/known_marketplaces.json"
 
 claude plugin install typescript-lsp@claude-plugins-official
 # TypeScript/JavaScript language server.

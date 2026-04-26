@@ -7,10 +7,20 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "git": {
+    "inline_blame": {
+      "enabled": false
+    }
+  },
+  "diagnostics": {
+    "inline": {
+      "enabled": true
+    }
+  },
   "agent": {
     "default_model": {
       "provider": "openrouter",
-      "model": "openai/gpt-oss-120b:free"
+      "model": "google/gemma-4-31b-it:free"
     },
     "play_sound_when_agent_done": true
   },
@@ -33,8 +43,10 @@
     "csharp": true,
     "graphql": true,
     "toml": true,
+    "comment": true,
     "env": true,
     "git-firefly": true,
+    "harper": true,
     "one-dark-pro": true
   },
   "file_types": {
