@@ -13,7 +13,7 @@ code --install-extension wix.vscode-import-cost
 code --install-extension gruntfuggly.todo-tree
 
 # AI
-code --install-extension RooVeterinaryInc.roo-cline
+code --install-extension kilocode.Kilo-Code
 code --install-extension Anthropic.claude-code
 
 # Color schemes

@@ -3,5 +3,7 @@ include "/usr/share/nano/*.nanorc"
 include "/usr/share/nano/extra/*.nanorc"
 include "/usr/share/nano-syntax-highlighting/*.nanorc"
 
+set autoindent
 set linenumbers
 set mouse
+set smarthome
