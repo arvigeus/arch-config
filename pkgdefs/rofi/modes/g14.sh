@@ -5,51 +5,17 @@
 # Define menu entries as arrays: ("Icon" "Label" "Function Name")
 MENU_ITEMS=(
     "󱖫|Status|profile_print_status"
-    "󰡳|Profile: Powersave|set_profile_powersave"
-    "󰊚|Profile: Balanced|set_profile_balanced"
-    "󰡴|Profile: Performance|set_profile_performance"
     "|Battery: 80% limit|set_battery_80"
     "|Battery: 100% limit|set_battery_100"
     "󰍹|Display: Enable|enable_display"
     "󰶐|Display: Disable|disable_display"
 )
 
-# Function to print CPU and GPU status
+PROFILE_ICON="󰊚"
+PROFILE_PREFIX="$PROFILE_ICON Profile: "
+
 profile_print_status() {
-    local cpu_mode gpu_mode resolution output starred_part status
-
-    cpu_mode=$(asusctl profile -p | awk '{print $NF}')
-    gpu_mode=$(supergfxctl -g)
-    [[ "$gpu_mode" == "AsusMuxDgpu" ]] && gpu_mode="Dedicated"
-
-    output=$(kscreen-doctor -o | grep "eDP-2")
-    starred_part=$(echo "$output" | grep -o "[0-9x@]*\*")
-    resolution=${starred_part%\*}
-
-    status=$(printf "CPU mode: <b>%s</b>\nGraphics mode: <b>%s</b>\nDisplay: <b>%s</b>" \
-        "$cpu_mode" "$gpu_mode" "$resolution")
-
-    notify-send -a "System Status" "$status"
-}
-
-# Power profiles
-set_profile_powersave() {
-    "$HOME/.local/bin/performance_profile" powersave
-    supergfxctl --mode Integrated
-    profile_print_status
-}
-
-set_profile_balanced() {
-    "$HOME/.local/bin/performance_profile" balanced
-    supergfxctl --mode Hybrid
-    profile_print_status
-}
-
-set_profile_performance() {
-    asusctl profile -P Performance
-    kscreen-doctor output.eDP-2.mode.0 &>/dev/null
-    supergfxctl --mode AsusMuxDgpu
-    profile_print_status
+    notify-send "System Status" "$(zephyrusctl status)"
 }
 
 # Battery limits
@@ -72,8 +38,26 @@ disable_display() {
     notify-send -a "eDP-2" "$(kscreen-doctor output.eDP-2.disable)"
 }
 
+list_profiles() {
+    zephyrusctl list | while IFS= read -r profile; do
+        [[ -n "$profile" ]] && echo "$PROFILE_PREFIX$profile"
+    done
+}
+
+apply_profile() {
+    local profile=$1
+
+    zephyrusctl apply "$profile"
+    profile_print_status
+}
+
 # Function to handle selected command
 handle_command() {
+    if [[ "$1" == "$PROFILE_PREFIX"* ]]; then
+        apply_profile "${1#"$PROFILE_PREFIX"}"
+        exit 0
+    fi
+
     for item in "${MENU_ITEMS[@]}"; do
         IFS="|" read -r icon label function_name <<<"$item"
         if [[ "$1" == "$icon $label" ]]; then
@@ -91,5 +75,6 @@ for item in "${MENU_ITEMS[@]}"; do
     IFS="|" read -r icon label _ <<<"$item"
     echo "$icon $label"
 done
+list_profiles
 
 exit 0
